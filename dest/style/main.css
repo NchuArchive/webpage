@@ -1,0 +1,9 @@
+.main {
+  background: #20DECB;
+  display: flex;
+  justify-content: center;
+  -webkit-align-items: center;
+}
+h1 {
+  color: #e6253e;
+}
