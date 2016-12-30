@@ -1,0 +1,1 @@
+$(document).ready(function(i){i(".topSection").visibility({onBottomPassed:function(e){i(".overlay").visibility({type:"fixed",offset:15})},onTopPassedReverse:function(e){i(".overlay").visibility({type:!1,offset:0})}})});

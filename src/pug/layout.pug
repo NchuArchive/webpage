@@ -6,13 +6,16 @@ html(lang='en')
     meta(http-equiv='X-UA-Compatible', content='IE=edge')
     meta(name='viewport', content='width=device-width, initial-scale=1')
     meta(name='author', content='YoYoHung')
-    //- link(rel='stylesheet', href='//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.6/semantic.min.js')
+    link(rel='stylesheet', href='//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.7/semantic.min.css')
     link(rel='stylesheet', href='//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css')
+    link(rel='stylesheet', type='text/css', href='./style/layout.css')
     block css
 
   body
+    include topSection.pug
     block content
 
     script(src='//code.jquery.com/jquery-2.2.3.js')
     script(src='//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.6/semantic.min.js')
+    script(src='js/topSection.js')
     block js
