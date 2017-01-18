@@ -1,11 +1,39 @@
 extends layout
 block css
-	link(rel='stylesheet', type='text/css', href='./style/main.css')
+  link(rel='stylesheet', type='text/css', href='./style/homeycombs.css')
+  link(rel='stylesheet', type='text/css', href='./style/main.css')
 block content
-	.ui.segment.main
-		h1 Hi ^_^
-	.ui.segment
-		img.ui.fluid.image(src='//cdn.litlepups.net/2015/07/24/cute-cats-wallpapers-hd-wallpaper-quotes.jpg')
-	.ui.segment
-		img.ui.fluid.image(src='//cdn.wallpapersafari.com/3/64/GXwBhs.jpg')
+  img#logo(src='http://www.lib.nchu.edu.tw/images/banners/lib_logo.png')
+  ul.tab-nav
+    li
+      a(href='#') 興大人
+    li
+      a(href='#') 大事紀
+    li
+      a(href='#') 機構典藏
+    li
+      a(href='#') 興大特藏
+    li
+      a(href='#') 參觀資訊
+    li
+      a(href='#') 相片集
 
+  #scrollMenu
+    ul.tab-nav
+      li
+        a(href='#') 興大人
+      li
+        a(href='#') 大事紀
+      li
+        a(href='#') 機構典藏
+      li
+        a(href='#') 興大特藏
+      li
+        a(href='#') 參觀資訊
+      li
+        a(href='#') 相片集
+  img(src='//cdn.litlepups.net/2015/07/24/cute-cats-wallpapers-hd-wallpaper-quotes.jpg')
+  img(src='//cdn.litlepups.net/2015/07/24/cute-cats-wallpapers-hd-wallpaper-quotes.jpg')
+
+block js
+  script(src='./js/homeycombs.css')

@@ -13,7 +13,6 @@ var paths = {
    css   : './dest/style',
    js    : './dest/js',
    images: './dest/assets/img'
-
  }
 };
 
@@ -23,6 +22,10 @@ gulp.task('pug', function() {
       .pipe(gulp.dest('./dest'));
 });
 
+gulp.task('css', function() {
+  gulp.src(paths.src.css)
+      .pipe(gulp.dest(paths.dest.css))
+});
 gulp.task('less', function() {
   gulp.src(paths.src.less)
       .pipe($.less())
@@ -57,4 +60,4 @@ gulp.task('watch',function(){
   gulp.watch(paths.src.js, ['scripts']);
 });
 
-gulp.task('default', ['pug', 'less', 'scripts', 'webserver', 'watch']);
+gulp.task('default', ['pug', 'css', 'less', 'scripts', 'webserver', 'watch']);

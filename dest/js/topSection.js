@@ -1,1 +1,1 @@
-$(document).ready(function(i){i(".topSection").visibility({onBottomPassed:function(e){i(".overlay").visibility({type:"fixed",offset:15})},onTopPassedReverse:function(e){i(".overlay").visibility({type:!1,offset:0})}})});
+$(document).ready(function(o){o(".topSection").visibility({onBottomPassed:function(i){o(".overlay").visibility({type:"fixed",offset:15})},onTopPassedReverse:function(i){o(".overlay").visibility({type:!1,offset:0})}}),o(window).scroll(function(){o(window).scrollTop()>140?o("#scrollMenu").fadeIn(100):o("#scrollMenu").fadeOut(100)})});

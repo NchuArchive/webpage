@@ -6,6 +6,37 @@
   justify-content: center;
   -webkit-align-items: center;
 }
-h1 {
-  color: #e6253e;
+#logo {
+  display: block;
+  margin: 10px auto;
+}
+ul.tab-nav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+ul.tab-nav li {
+  float: left;
+}
+ul.tab-nav li a {
+  display: block;
+  color: #fff;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+ul.tab-nav li:hover {
+  color: #fff;
+  background-color: #111;
+}
+#scrollMenu {
+  display: none;
+}
+#scrollMenu .tab-nav {
+  width: 100%;
+  position: fixed;
+  background-color: #A2D5F2;
+  top: 0;
 }
