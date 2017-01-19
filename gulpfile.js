@@ -12,7 +12,7 @@ var paths = {
    html  : './dest',
    css   : './dest/style',
    js    : './dest/js',
-   images: './dest/assets/img'
+   images: './dest/img'
  }
 };
 
