@@ -29,9 +29,32 @@
   padding-top: 40%;
   font-size: 20px;
 }
+#introduceMob {
+  display: none;
+  margin-bottom: 15px;
+}
+#introduceMob .menu {
+  width: 100%;
+}
 @media screen and (min-width: 1200px) {
   #introduce {
-    height: 600px !important;
+    height: 600px;
+  }
+  #introduceMob {
+    display: none;
+  }
+}
+@media screen and (min-width: 491px) and (max-width: 687px) {
+  #introduce {
+    height: 1260px;
+  }
+}
+@media screen and (max-width: 490px) {
+  #introduce {
+    display: none;
+  }
+  #introduceMob {
+    display: block;
   }
 }
 #history img {

@@ -1,56 +1,74 @@
 extends layout
 block css
   link(rel='stylesheet', type='text/css', href='./style/homeycombs.css')
+
+  link(rel='stylesheet', type='text/css', href='./style/owl.carousel.min.css')
+  link(rel='stylesheet', type='text/css', href='./style/owl.theme.default.min.css')
   link(rel='stylesheet', type='text/css', href='./style/main.css')
 block content
   .ui.container
     #slider
-      img(src='./img/slide1.jpg')
+      .owl-carousel.owl-theme
+        .item
+          img(src='./img/slide1.jpg')
+        .item
+          img(src='./img/slide2.jpg')
 
     #exhibition
       .ui.equal.width.grid
         .column
           button.ui.teal.button 興大特藏
         .column
-          button.ui.teal.button 校史館
-        .column
           button.ui.teal.button 印象之外特展
 
     #introduce
       .honeycombs
-        .comb
+        a.comb(href='#')
           img(src='./img/honeycombs1.png')
           span 校景變遷
-        .comb
+        a.comb(href='#')
           img(src='./img/honeycombs2.png')
           span 興大特藏
-        .comb
+        a.comb(href='#')
           img(src='./img/honeycombs3.png')
           span 大事紀
-        .comb
+        a.comb(href='#')
           img(src='./img/honeycombs4.png')
-          span 校景變遷
-        .comb
+          span 校景變遷(re)
+        a.comb(href='#')
           img(src='./img/honeycombs5.png')
-          span 興大特藏
-        .comb
+          span 興大特藏(re)
+        a.comb(href='#')
           img(src='./img/honeycombs6.png')
           span 360°環景
-        .comb
+        a.comb(href='#')
           img(src='./img/honeycombs7.png')
           span 校景導覽
-        .comb
+        a.comb(href='#')
           img(src='./img/honeycombs8.png')
           span 興大人
-        .comb
+        a.comb(href='#')
           img(src='./img/honeycombs9.png')
           span 口述校史
-        .comb
+        a.comb(href='#')
           img(src='./img/honeycombs10.png')
           span 大事紀
+    #introduceMob
+      .ui.vertical.menu
+        a.item(href='#') 興大特藏
+        a.item(href='#') 大事紀
+        a.item(href='#') 校景變遷
+        a.item(href='#') 360°環景
+        a.item(href='#') 校景導覽
+        a.item(href='#') 興大人
+        a.item(href='#') 校景變遷
+        a.item(href='#') 口述校史
+        a.item(href='#') 大事紀
+
     #history
       img(src='./img/history.jpg')
 
 block js
   script(src='./js/jquery.homeycombs.js')
+  script(src='./js/owl.carousel.min.js')
   script(src='./js/index.js')
