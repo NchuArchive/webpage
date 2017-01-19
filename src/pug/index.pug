@@ -6,10 +6,51 @@ block content
   .ui.container
     #slider
       img(src='./img/slide1.jpg')
+
     #exhibition
-      button.ui.button 特藏室
-      button.ui.button 校史館
-      button.ui.button 印象之外特展
+      .ui.equal.width.grid
+        .column
+          button.ui.teal.button 興大特藏
+        .column
+          button.ui.teal.button 校史館
+        .column
+          button.ui.teal.button 印象之外特展
+
     #introduce
+      .honeycombs
+        .comb
+          img(src='./img/honeycombs1.png')
+          span 校景變遷
+        .comb
+          img(src='./img/honeycombs2.png')
+          span 興大特藏
+        .comb
+          img(src='./img/honeycombs3.png')
+          span 大事紀
+        .comb
+          img(src='./img/honeycombs4.png')
+          span 校景變遷
+        .comb
+          img(src='./img/honeycombs5.png')
+          span 興大特藏
+        .comb
+          img(src='./img/honeycombs6.png')
+          span 360°環景
+        .comb
+          img(src='./img/honeycombs7.png')
+          span 校景導覽
+        .comb
+          img(src='./img/honeycombs8.png')
+          span 興大人
+        .comb
+          img(src='./img/honeycombs9.png')
+          span 口述校史
+        .comb
+          img(src='./img/honeycombs10.png')
+          span 大事紀
+    #history
+      img(src='./img/history.jpg')
+
 block js
   script(src='./js/jquery.homeycombs.js')
+  script(src='./js/index.js')

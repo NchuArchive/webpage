@@ -11,8 +11,29 @@
   display: block;
   margin: 15px auto;
 }
+#exhibition button {
+  width: 100%;
+}
 #introduce {
   width: 100%;
-  height: 500px;
   background: url('../img/intrducebg.png');
+  margin-bottom: 20px;
+}
+#introduce .honeycombs {
+  padding: 10px 0px;
+}
+#introduce .honeycombs .inner_span {
+  background-color: rgba(162, 213, 242, 0.8);
+}
+#introduce .honeycombs .inner-text {
+  padding-top: 40%;
+  font-size: 20px;
+}
+@media screen and (min-width: 1200px) {
+  #introduce {
+    height: 600px !important;
+  }
+}
+#history img {
+  width: 100%;
 }
