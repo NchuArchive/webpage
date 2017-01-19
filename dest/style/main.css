@@ -1,55 +1,18 @@
-.main {
-  background: #20DECB !important;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  -webkit-align-items: center;
-}
-#logo {
-  display: block;
-  margin: 10px auto;
-}
-.tab-nav {
-  background-color: #333;
-}
-.tab-nav ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-}
-.tab-nav ul li a {
-  display: block;
-  color: #fff;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-.tab-nav ul li:hover {
-  color: #fff;
-  background-color: #111;
-}
-#scrollMenu {
-  display: none;
-}
-#scrollMenu.tab-nav {
-  width: 100%;
-  position: fixed;
-  top: 0;
-  background-color: #A2D5F2;
-}
-#scrollMenu.tab-nav ul li a:hover {
-  background-color: #7dbadc;
+#slider {
+  margin-top: 5px;
 }
 #slider img {
   margin: 0 auto;
+  width: 100%;
   display: block;
 }
-@media screen and (max-width: 1200px) {
-  #slider img {
-    width: 100%;
-  }
+#exhibition {
+  width: 100%;
+  display: block;
+  margin: 15px auto;
+}
+#introduce {
+  width: 100%;
+  height: 500px;
+  background: url('../img/intrducebg.png');
 }

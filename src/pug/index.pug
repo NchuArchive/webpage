@@ -3,9 +3,13 @@ block css
   link(rel='stylesheet', type='text/css', href='./style/homeycombs.css')
   link(rel='stylesheet', type='text/css', href='./style/main.css')
 block content
-  #slider
-    img(src='./img/slide1.jpg')
-
-
+  .ui.container
+    #slider
+      img(src='./img/slide1.jpg')
+    #exhibition
+      button.ui.button 特藏室
+      button.ui.button 校史館
+      button.ui.button 印象之外特展
+    #introduce
 block js
   script(src='./js/jquery.homeycombs.js')
