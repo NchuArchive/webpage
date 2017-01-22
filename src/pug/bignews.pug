@@ -1,0 +1,32 @@
+extends layout
+block css
+  link(rel='stylesheet', type='text/css', href='./style/timeline.css')
+  link(rel='stylesheet', type='text/css', href='./style/bignews.css')
+block content
+  #bigNews.ui.container
+    h1.item-title 校史大事記 - {{ periods }}
+    #periods
+      button.ui.blue.button(v-on:click="switchPeriods(0)") 台灣總督府時期
+      button.ui.blue.button(v-on:click="switchPeriods(1)") 省立農學院時期
+      button.ui.blue.button(v-on:click="switchPeriods(2)") 國立中興大學時期
+    #news
+      .item(v-if='view === 0')
+        section#cd-timeline.cd-container
+          .cd-timeline-block(v-for='item in japan')
+            .cd-timeline-img.cd-picture
+              i.fa.fa-coffee
+            .cd-timeline-content
+              h2 {{ item.title }}
+              p {{ item.context }}
+              span.cd-date {{ item.date }}
+
+      .item(v-if='view === 1')
+
+      .item(v-if='view === 2')
+
+
+block js
+  script(src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.10/vue.min.js')
+  script(src='./js/modernizr.js')
+  script(src='./js/timeline.js')
+  script(src='./js/bignews.js')
