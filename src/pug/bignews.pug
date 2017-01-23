@@ -3,42 +3,40 @@ block css
   link(rel='stylesheet', type='text/css', href='./style/timeline.css')
   link(rel='stylesheet', type='text/css', href='./style/bignews.css')
 block content
-  #bigNews.ui.container
+  #bigNews.ui.container(v-cloak)
     h1.item-title 校史大事記 - {{ periods }}
     #periods
-      button.ui.blue.button(v-on:click="switchPeriods(0)") 台灣總督府時期
-      button.ui.blue.button(v-on:click="switchPeriods(1)") 省立農學院時期
-      button.ui.blue.button(v-on:click="switchPeriods(2)") 國立中興大學時期
+      button.ui.blue.button(v-on:click='switchPeriods(0)')
+        | 台灣總督府時期
+        br
+        | 1912~1945
+      button.ui.blue.button(v-on:click='switchPeriods(1)')
+        | 省立農學院時期
+        br
+        | 1945~1971
+      button.ui.blue.button(v-on:click='switchPeriods(2)')
+        | 國立中興大學時期
+        br
+        | 1971~至今
     #news
-      .item(v-if='view === 0')
-        section#cd-timeline.cd-container
-          //- .cd-timeline-block(v-for='item in japan')
-          .cd-timeline-block
-            .cd-timeline-img.cd-picture
-              i.fa.fa-trophy.fa-fw
-            .cd-timeline-content
-              span.cd-date 1919/05/09
-              h2.timelineTitle 阿部文夫出任校長
-              p.timelineText 1919 - 五月九日，任命阿部文夫為校長。
-              img.media(src='http://imgur.com/R4BXK5P.jpg')
-              p.mediaCredit 照片來源：榕畔會史
+      section#cd-timeline.cd-container
+        .cd-timeline-block(v-for='item in timeline')
+          .cd-timeline-img.cd-picture
+            i.fa.fa-trophy.fa-fw(v-bind:class='{ active: item.type == 1 }')
+            i.fa.fa-book.fa-fw(v-bind:class='{ active: item.type == 2 }')
+            i.fa.fa-newspaper-o.fa-fw(v-bind:class='{ active: item.type == 3 }')
+          .cd-timeline-content
+            span.cd-date {{ item.date }}
+            h2.timelineTitle {{ item.title }}
+            p.text {{ item.text }}
+            img.media(v-bind:src='item.media')
+            //- p {{ item.media }}
+            p.mediaCaption {{ item.caption }}
+            p.mediaCredit {{ item.credit }}
 
-            //- .cd-timeline-img.cd-picture
-            //-   i.fa.fa-trophy.fa-fw(v-bind:class='{ active: item.newsType == 1 }')
-            //-   i.fa.fa-book.fa-fw(v-bind:class='{ active: item.newsType == 2 }')
-            //-   i.fa.fa-newspaper-o.fa-fw(v-bind:class='{ active: item.newsType == 3 }')
-            //- .cd-timeline-content
-            //-   h2 {{ item.title }}
-            //-   p {{ item.context }}
-            //-   span.cd-date {{ item.date }}
-
-      .item(v-if='view === 1')
-
-      .item(v-if='view === 2')
 
 
 block js
-  script(src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.10/vue.min.js')
   script(src='./js/modernizr.js')
   script(src='./js/timeline.js')
   script(src='./js/bignews.js')
