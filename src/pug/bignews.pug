@@ -12,13 +12,25 @@ block content
     #news
       .item(v-if='view === 0')
         section#cd-timeline.cd-container
-          .cd-timeline-block(v-for='item in japan')
+          //- .cd-timeline-block(v-for='item in japan')
+          .cd-timeline-block
             .cd-timeline-img.cd-picture
-              i.fa.fa-coffee
+              i.fa.fa-trophy.fa-fw
             .cd-timeline-content
-              h2 {{ item.title }}
-              p {{ item.context }}
-              span.cd-date {{ item.date }}
+              span.cd-date 1919/05/09
+              h2.timelineTitle 阿部文夫出任校長
+              p.timelineText 1919 - 五月九日，任命阿部文夫為校長。
+              img.media(src='http://imgur.com/R4BXK5P.jpg')
+              p.mediaCredit 照片來源：榕畔會史
+
+            //- .cd-timeline-img.cd-picture
+            //-   i.fa.fa-trophy.fa-fw(v-bind:class='{ active: item.newsType == 1 }')
+            //-   i.fa.fa-book.fa-fw(v-bind:class='{ active: item.newsType == 2 }')
+            //-   i.fa.fa-newspaper-o.fa-fw(v-bind:class='{ active: item.newsType == 3 }')
+            //- .cd-timeline-content
+            //-   h2 {{ item.title }}
+            //-   p {{ item.context }}
+            //-   span.cd-date {{ item.date }}
 
       .item(v-if='view === 1')
 

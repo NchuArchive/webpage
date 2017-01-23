@@ -1,0 +1,70 @@
+body {
+  background-color: #F2F7FF !important;
+}
+#slider {
+  margin-top: 5px;
+  img {
+    margin: 0 auto;
+    width: 100%;
+    display: block;
+  }
+}
+#exhibition {
+  width: 100%;
+
+  display: block;
+  margin: 15px auto;
+  button {
+    width: 100%;
+  }
+}
+
+#introduce {
+  width: 100%;
+  background: url('../img/intrducebg.png');
+  margin-bottom: 20px;
+  .honeycombs {
+    padding: 10px 0px;
+    .inner_span {
+      background-color: rgba(162, 213, 242, 0.8);
+    }
+    .inner-text {
+      padding-top: 40%;
+      font-size: 20px;
+    }
+  }
+}
+
+#introduceMob {
+  display: none;
+  margin-bottom: 15px;
+  .menu {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  #introduce {
+    height: 600px;
+  }
+  #introduceMob {
+    display: none;
+  }
+}
+@media screen and (min-width: 491px) and (max-width: 687px) {
+  #introduce {
+    height: 1260px;
+  }
+}
+@media screen and (max-width: 490px) {
+  #introduce {
+    display: none;
+  }
+  #introduceMob {
+    display: block;
+  }
+}
+#history {
+  img {
+    width: 100%;
+  }
+}

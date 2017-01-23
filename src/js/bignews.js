@@ -3,21 +3,25 @@ $(document).ready(function() {
 
   var bignews = new Vue({
     el: '#bigNews',
-    data: {
-      periods: period[0],
-      view: 0,
-      japan: [
-        {
-          title: 'test',
-          context: 'test text',
-          date: '2016/01/01'
-        },
-        {
-          title: '1',
-          context: '2',
-          date: '2016/01/02'
-        }
-      ]
+    data() {
+      return {
+        periods: period[0],
+        view: 0,
+        japan: [
+          {
+            title: 'test',
+            context: 'test text',
+            date: '2016/01/01',
+            newsType: 1,
+          },
+          {
+            title: '1',
+            context: '2',
+            date: '2016/01/02',
+            newsType: 2,
+          }
+        ],
+      }
     },
     methods: {
       switchPeriods: function(item) {
