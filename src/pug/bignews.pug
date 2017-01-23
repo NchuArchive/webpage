@@ -28,8 +28,8 @@ block content
           .cd-timeline-content
             span.cd-date {{ item.date }}
             h2.timelineTitle {{ item.title }}
-            p.text {{ item.text }}
-            img.media(v-bind:src='item.media')
+            p.text(v-html='item.text')
+            img.media(v-bind:src='item.media' v-if='item.media != "null"')
             //- p {{ item.media }}
             p.mediaCaption {{ item.caption }}
             p.mediaCredit {{ item.credit }}
