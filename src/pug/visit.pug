@@ -1,0 +1,42 @@
+extends layout
+block css
+  link(rel='stylesheet' href='https://unpkg.com/leaflet@1.0.3/dist/leaflet.css')
+  link(rel='stylesheet', type='text/css', href='./style/visit.css')
+block content
+  #visit.ui.container
+    #visitInfo
+      h1.title 參觀資訊
+      h2 位置資訊
+      .ui.grid
+        .eight.wide.column
+          #map
+        .eight.wide.column
+          ul
+            li 地址: (40227) 臺中市南區興大145號
+            li 電話: (04)2287-3181#355
+            li
+              | 開館時間:
+              span.openTime 每週一三五 10:00~16:00
+    #trafficInfo
+      h2 交通方式
+        h3.type 台中市公車
+        ol
+          li 統聯客運73線到本校校門口(興大路)。
+          li 台中客運33線、35線到本校校門口(興大路)。
+          li 彰化客運52線到本校校門口(興大路)。(不經台中火車站)
+          li 統聯客運50線、59線到本校國光路側門。
+          li 全航客運65線到本校國光路側門。
+          li 台中高鐵站搭乘台中客運82線在第三分局站下車，沿學府路走約300公尺到本校校門口(興大路)。
+          li 台中高鐵站搭乘全航客運6258線（台中高鐵－兒童藝術館線）到本校國光路側門。（不經台中火車站）
+        h3.type 高鐵
+        ol
+          li 台中高鐵站搭乘台中客運82線在第三分局下車，沿學府路走約300公尺到本校校門口(興大路)。
+          li 台中高鐵站搭乘全航客運6258線（台中高鐵－兒童藝術館線）到本校國光路側門。（不經台中火車站）
+        h3.type 計程車
+        ol
+          li 台中火車站至興大，車程約10-15分鐘。
+          li 高鐵車站至興大，車程約20-30分鐘。也可在高鐵轉搭台鐵(新烏日站)至台中火車站，再依上述方式到興大。
+
+block js
+  script(src='https://unpkg.com/leaflet@1.0.3/dist/leaflet.js')
+  script(src='./js/visit.js')

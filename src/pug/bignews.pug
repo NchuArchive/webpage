@@ -4,7 +4,7 @@ block css
   link(rel='stylesheet', type='text/css', href='./style/bignews.css')
 block content
   #bigNews.ui.container(v-cloak)
-    h1.item-title 校史大事記 - {{ timeline['title'] }}
+    h1.title 校史大事記 - {{ timeline['title'] }}
     #periods
       button.ui.blue.button(v-on:click='selectPeriods=0')
         | 台灣總督府時期
@@ -15,7 +15,7 @@ block content
         br
         | 1928~1943
       button.ui.blue.button(v-on:click='selectPeriods=2')
-        | 台灣總督府台中農林學校時期(台中)
+        | 台灣總督府台中農林學校時期
         br
         | 1943~1945
       button.ui.blue.button(v-on:click='selectPeriods=3')
