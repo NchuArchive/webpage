@@ -4,35 +4,43 @@ block css
   link(rel='stylesheet', type='text/css', href='./style/bignews.css')
 block content
   #bigNews.ui.container(v-cloak)
-    h1.item-title 校史大事記 - {{ periods }}
+    h1.item-title 校史大事記 - {{ timeline['title'] }}
     #periods
-      button.ui.blue.button(v-on:click='switchPeriods(0)')
+      button.ui.blue.button(v-on:click='selectPeriods=0')
         | 台灣總督府時期
         br
-        | 1912~1945
-      button.ui.blue.button(v-on:click='switchPeriods(1)')
+        | 1912~1928
+      button.ui.blue.button(v-on:click='selectPeriods=1')
+        | 台北帝國大學時期
+        br
+        | 1928~1943
+      button.ui.blue.button(v-on:click='selectPeriods=2')
+        | 台灣總督府台中農林學校時期(台中)
+        br
+        | 1943~1945
+      button.ui.blue.button(v-on:click='selectPeriods=3')
         | 省立農學院時期
         br
         | 1945~1971
-      button.ui.blue.button(v-on:click='switchPeriods(2)')
+      button.ui.blue.button(v-on:click='selectPeriods=4')
         | 國立中興大學時期
         br
         | 1971~至今
     #news
       section#cd-timeline.cd-container
-        .cd-timeline-block(v-for='item in timeline')
+        .cd-timeline-block(v-for='event in timeline["news"]')
           .cd-timeline-img.cd-picture
-            i.fa.fa-trophy.fa-fw(v-bind:class='{ active: item.type == 1 }')
-            i.fa.fa-book.fa-fw(v-bind:class='{ active: item.type == 2 }')
-            i.fa.fa-newspaper-o.fa-fw(v-bind:class='{ active: item.type == 3 }')
+            i.fa.fa-trophy.fa-fw(v-bind:class='{ active: event.type == 1 }')
+            i.fa.fa-book.fa-fw(v-bind:class='{ active: event.type == 2 }')
+            i.fa.fa-newspaper-o.fa-fw(v-bind:class='{ active: event.type == 3 }')
           .cd-timeline-content
-            span.cd-date {{ item.date }}
-            h2.timelineTitle {{ item.title }}
-            p.text(v-html='item.text')
-            img.media(v-bind:src='item.media' v-if='item.media != "null"')
-            //- p {{ item.media }}
-            p.mediaCaption {{ item.caption }}
-            p.mediaCredit {{ item.credit }}
+            span.cd-date {{ event.date }}
+            h2.timelineTitle {{ event.title }}
+            p.text(v-html='event.text')
+            img.media(v-bind:src='event.media' v-if='event.media != "null"')
+            //- p {{ event.media }}
+            p.mediaCaption {{ event.caption }}
+            p.mediaCredit {{ event.credit }}
 
 
 
