@@ -1,0 +1,30 @@
+extends layout
+block css
+  link(rel='stylesheet', type='text/css', href='./style/special.css')
+block content
+  #special.ui.container
+    h1.title 興大特藏
+
+    h2 日治時期臺灣農業史料數位典藏
+    .ui.grid
+      .webView.eight.wide.column
+        a(href='http://tahda.lib.nchu.edu.tw/gs32/nchudc/intro.html', target='_blank')
+          img(src='https://imgur.com/t2sygvF.jpg')
+      .eight.wide.column
+        p 中興大學成立歷史悠久，在日治時期大正八年（1919），臺灣總督府為開發臺灣農林資源，培養農林人才，設立「農林專門學校」，即為本校前身。昭和三年（1928）總督府在臺北高等農林學校校址設立「臺北帝國大學」，同時將本校前身併入，改制為「臺北帝國大學附屬農林專門部」。
+        p 民國九十四至九十五年配合圖書館新館落成，本館積極執行日治時期農林類資料之整理工作，陸續整理出＜卒業報文＞、＜臺灣農業資料＞。其中＜卒業報文＞為當時學生所寫畢業論文，主要以臺灣農業主題為研究中心，其主要涵蓋範圍有臺灣植生、土壤、運輸技術、市場調查等，研究領域範圍甚廣，型態為「全手抄本」，這批獨特的珍貴資料，將當時重要研究文獻加以保存，均為研究日治時期農業變遷之重要學術資源，但因資料年代久遠、紙質脆弱，調閱使用易造成損壞，對資料的保存造成極大的影響。
+        p 因此，中興大學圖書館希望透過參與國科會「數位典藏國家型科技計畫」，達到文化保存及推廣教育利用目的，第一期擬將＜卒業報文＞進行數位化影像典藏，並為資料逐一建立標準化可交換之「後設資料」（Metadata），建置館藏臺灣農業文獻史料資料庫，使該批深具臺灣農業文化特色之資料，能以資訊及網路化方式即時供大眾查詢使用，支援相關學術之研究，使國家文化資產得以供全民共享。
+        a(href='http://tahda.lib.nchu.edu.tw/gs32/nchudc/intro.html', target='_blank') 網站連結
+
+    h2 中興大學機構典藏
+    .ui.grid
+      .webView.eight.wide.column
+        a(href='http://ir.lib.nchu.edu.tw/', target='_blank')
+          img(src='http://imgur.com/uw73q65.jpg')
+      .eight.wide.column
+        p 中興大學目前擁有許多學術資源及特殊典藏，這些文獻資源種類繁雜且分置各處，如未能有系統的建置及整合文獻資料，將導致資源的使用率及能見度低落，也造成教學研究的不便。
+        p 機構典藏期望能給予師生資源面及技術面的協助，提高教學品質及研究數量，爲整合保存本校學術成果及珍貴資料盡一份心力。
+        a(href='http://ir.lib.nchu.edu.tw/', target='_blank') 網站連結
+
+block js
+  script(src='./js/special.js')
