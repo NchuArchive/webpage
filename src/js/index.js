@@ -7,7 +7,9 @@ $(document).ready(function() {
     dots: true,
     items: 1,
     autoplay: true,
-    autoplayTimeout: 2000,
-    autoplayHoverPause: true
+    autoplayTimeout: 5000,
+  });
+  $('.owl-carousel').on('translate.owl.carousel', (e)=> {
+    console.log('slide');
   });
 });
