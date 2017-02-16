@@ -2,9 +2,9 @@ extends layout
 block css
   link(rel='stylesheet', type='text/css', href='./style/about.css')
 block content
-  #emblem.ui.container
+  #emblem.ui.container.animated.fadeIn
     h1.title 校徽
-    .ui.grid
+    .ui.grid.stackable
       .eight.wide.column
         img.lazy(data-original='./img/emblem.gif')
       .context.eight.wide.column

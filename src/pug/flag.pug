@@ -1,13 +1,13 @@
 extends layout
 block css
-  link(rel='stylesheet', type='text/css', href='./style/flag.css')
+  link(rel='stylesheet', type='text/css', href='./style/about.css')
 block content
   #flag.ui.container
-    h1.title 校旗
-    .ui.grid
+    h1.title.animated.fadeIn 校旗
+    .ui.grid.stackable
       .eight.wide.column
-        img(src='./img/flag.gif')
-      .context.eight.wide.column
+        img.animated.fadeIn(src='./img/flag.gif')
+      .context.eight.wide.column.animated.fadeIn
         p 校旗圖案在1972年春，公開徵求設計圖案，在五十多件應徵作品中選出一件，並經審查會議、行政會議、校務會議等程序審查通過後採用。
         p 長方形，黃底，上方自右至左橫書「國立中興大學」，正楷字。
         p 中間為六十齒輪圓圈，內書「興大」二字，均白色；
