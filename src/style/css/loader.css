@@ -56,11 +56,3 @@
   }
 }
 
-#loading {
-  display: block;
-  position: absolute;
-  z-index: 2;
-  width: 100vw;
-  height: 90vh;
-  background-color: #eee;
-}
