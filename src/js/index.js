@@ -11,6 +11,7 @@ $(document).ready(() => {
     items: 1,
     autoplay: true,
     autoplayTimeout: 5000,
+    lazyLoad: true
   });
 
   $('.owl-carousel').on('translate.owl.carousel', (e)=> {
