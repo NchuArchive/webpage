@@ -1,0 +1,6 @@
+{
+  "editor.formatOnPaste": true,
+  "editor.snippetSuggestions": "top",
+  "vsicons.presets.angular": false,
+  "editor.minimap.enabled": true
+}

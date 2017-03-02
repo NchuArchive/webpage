@@ -60,4 +60,5 @@ gulp.task('watch',function(){
   gulp.watch(paths.src.js, ['scripts']);
 });
 
-gulp.task('default', ['pug', 'css', 'less', 'scripts', 'webserver', 'watch']);
+gulp.task('default', ['webserver', 'watch']);
+gulp.task('build', ['pug', 'css', 'less', 'scripts']);
