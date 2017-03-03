@@ -1,0 +1,22 @@
+extends layout
+block css
+  link(rel='stylesheet', type='text/css', href='./style/schoolView.css')
+block content
+  #schoolView.ui.container.animated.fadeIn
+    h1.title 校園風華
+    
+    .ui.special.cards
+      .card(v-for='card in cards')
+        .blurring.dimmable.image
+          .ui.dimmer
+            .content
+              .center
+                a.ui.inverted.button 詳細
+          img(:src='card.image')
+        .content
+          a.header(:href='card.url') {{ card.title }}
+          .meta
+            span {{ card.context }}
+
+block js
+  script(src='./js/schoolView.js')
