@@ -15,6 +15,5 @@ $(document).ready(() => {
   });
 
   $('.owl-carousel').on('translate.owl.carousel', (e)=> {
-    console.log('slide');
   });
 });

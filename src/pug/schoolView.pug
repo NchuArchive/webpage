@@ -5,16 +5,16 @@ block content
   #schoolView.ui.container.animated.fadeIn
     h1.title 校園風華
     
-    .ui.special.cards
+    .ui.special.cards.animated.fadeIn
       .card(v-for='card in cards')
         .blurring.dimmable.image
           .ui.dimmer
             .content
               .center
-                a.ui.inverted.button 詳細
+                a.ui.inverted.button(:href='card.url', target='_blank') 詳細
           img(:src='card.image')
         .content
-          a.header(:href='card.url') {{ card.title }}
+          a.header(:href='card.url', target='_blank') {{ card.title }}
           .meta
             span {{ card.context }}
 

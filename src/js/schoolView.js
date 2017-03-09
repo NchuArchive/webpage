@@ -16,9 +16,6 @@ var vm = new Vue({
       $.each(data['rows'], (key, val) => {
         this.cards.push(val);
       });
-      $('.special.cards .image').dimmer({
-        on: 'hover'
-      });
     });
   },
 })

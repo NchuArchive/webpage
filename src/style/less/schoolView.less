@@ -1,2 +1,23 @@
 #schoolView {
+  img {
+    height: 200px;
+  }
+  .cards {
+    display: flex;
+    justify-content: center;
+  }
+  .ui.dimmer {
+    display: block;
+    
+    opacity: 0;
+    transition: opacity .5s ease-out;
+    -moz-transition: opacity .5s ease-out;
+    -webkit-transition: opacity .5s ease-out;
+    -o-transition: opacity .5s ease-out;
+  }
+  .dimmable.image:hover {
+    .ui.dimmer {
+      opacity: 1;
+    }
+  }
 }
