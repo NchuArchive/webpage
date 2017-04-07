@@ -14,6 +14,4 @@ $(document).ready(() => {
     lazyLoad: true
   });
 
-  $('.owl-carousel').on('translate.owl.carousel', (e)=> {
-  });
 });
