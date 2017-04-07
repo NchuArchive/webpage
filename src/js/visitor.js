@@ -26,7 +26,7 @@
         var items = data.items
         var albumTitle = title.replace('Content from ', '')
         var html = '<h3>' + albumTitle + '</h3>'
-        html += "<div class='images'>"
+        html += '<div class="images">'
 
         for (var i = 0; i < items.length; ++i) {
           var item = items[i]
@@ -43,7 +43,13 @@
   }
 
   document.addEventListener('DOMContentLoaded', function () {
-    var ary = ['72157681696017195',
+    var ary = [
+      '72157681597863776',
+      '72157679740848361',
+      '72157679984374820',
+      '72157678267625034',
+      '72157681597520836',
+      '72157681696017195',
       '72157679747210280',
       '72157677975151564',
       '72157681341413016',
