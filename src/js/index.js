@@ -1,8 +1,7 @@
 $(document).ready(() => {
-
   $(window).load(() => {
-    $('.honeycombs').honeycombs();
-  });
+    $('.honeycombs').honeycombs()
+  })
 
   $('.owl-carousel').owlCarousel({
     loop: true,
@@ -12,6 +11,5 @@ $(document).ready(() => {
     autoplay: true,
     autoplayTimeout: 5000,
     lazyLoad: true
-  });
-
-});
+  })
+})
