@@ -1,14 +1,16 @@
 #slider {
-  margin-top: 5px;
+  margin-top: 16px;
   img {
     margin: 0 auto;
     width: 100%;
     display: block;
   }
+  .owl-stage-outer {
+    box-shadow: 3px 4px 10px 0px rgba(0, 0, 0, 0.18);
+  }
 }
 #exhibition {
   width: 100%;
-
   display: block;
   margin: 15px auto;
   button {
@@ -29,12 +31,16 @@
       font-size: 20px;
     }
   }
+  .hex_inner {
+    box-shadow: 4px 1px 7px 0px rgba(136, 136, 136, 0.64);
+  }
 }
 
 #introduceMob {
   display: none;
   margin-bottom: 15px;
-  margin-left: auto;
+  align-items: center;
+  justify-content: center;
   .menu {
     height: 100%;
   }
@@ -50,7 +56,6 @@
   }
   .ui.dimmer {
     display: block;
-    
     opacity: 0;
     transition: opacity .5s ease-out;
     -moz-transition: opacity .5s ease-out;
