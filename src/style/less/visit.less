@@ -2,6 +2,7 @@
   li {
     font-size: 18px;
     margin-bottom: 10px;
+    line-height: 1.5;
   }
   #map {
     height: 400px;
@@ -26,5 +27,19 @@
   }
   #trafficInfo {
     padding-bottom: 50px;
+    align-items: center;
+  }
+  .column {
+    @media only screen and (max-width: 767px) {
+      width: 100% !important;
+    }
+  }
+  @media only screen and (max-width: 767px) {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  @media only screen and (max-width: 480px) {
+    padding-left: 24px;
+    padding-right: 24px;
   }
 }
