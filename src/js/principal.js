@@ -2,7 +2,8 @@ var principal = new Vue({
   el: '#principal',
   data() {
     return {
-      principals: []
+      principals: [],
+      principalInfo: ''
     }
   },
   mounted() {
@@ -17,5 +18,11 @@ var principal = new Vue({
         this.principals.push(val)
       })
     })
+  },
+  methods: {
+    showInfo(num) {
+      this.principalInfo = this.principals[num]['info']
+      $('#principal .modal').modal('show')
+    }
   }
 })

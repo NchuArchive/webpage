@@ -5,14 +5,16 @@ block content
   #principal.ui.container
     h1.title 歷任校長
     .ui.special.cards
-      .ui.card(v-for='principal in principals')
+      .ui.card(v-for='(principal, val) in principals', @click='showInfo(val)')
         a.image(href='#')
           img.lazy(v-bind:src='principal.img')
         .content
           p.header(href='#') {{ principal.title }}
           .meta
             p {{ principal.time }}
-
-
+    .ui.modal
+      .header 詳細資資料
+      .content(v-html='principalInfo')
+        
 block js
   script(src='./js/principal.js')
