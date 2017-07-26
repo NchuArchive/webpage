@@ -2,27 +2,17 @@ extends layout
 block css
   link(rel='stylesheet', type='text/css', href='./style/alumni.css')
 block content
-  head
   #outstanding.ui.container
     h1.title 傑出校友
-    h2.session 第20屆
-    .ui.stackable.grid
-      .four.wide.column.pic
-        a(href='#')
-          img.alu-img(src='./img/1.png')
-          p.alu-name 奇怪的伯伯
-      .four.wide.column.pic
-        a(href='#')
-          img.alu-img(src='./img/1.png')
-      .four.wide.column.pic
-        a(href='#')
-          img.alu-img(src='./img/1.png')
-      .four.wide.column.pic
-        a(href='#')
-          img.alu-img(src='./img/1.png')
-      .four.wide.column.pic
-        a(href='#')
-          img.alu-img(src='./img/1.png')
-      .four.wide.column.pic
-        a(href='#')
-          img.alu-img(src='./img/1.png')
+    .outstanding(v-for='sessions, index in outstanding')
+      h2.session
+        | 第
+        | {{ index+1 }}
+        | 屆
+      .ui.stackable.grid
+        .four.wide.column.pic(v-for='data in sessions')
+          a(:href='"/data/pdf/" + data.num + ".pdf"', target='_blank')
+            img.alu-img(:src='"/img/outstanding/" + data.num + "_" + data.name + ".png"')
+            p.alu-name {{ data.name }}
+block js
+  script(src='./js/alumni.js')
