@@ -54,6 +54,12 @@ gulp.task('images', () => {
     .pipe(gulp.dest(paths.dist.images))
 })
 
+// gh-pages
+gulp.task('deploy', () => {
+  return gulp.src('dist/**/*')
+    .pipe(ghPages())
+})
+
 gulp.task('webserver', () => {
   gulp
     .src(paths.dist.html)
@@ -72,3 +78,4 @@ gulp.task('watch', () => {
 
 gulp.task('default', ['webserver', 'watch'])
 gulp.task('build', ['pug', 'css', 'less', 'scripts', 'data'])
+gulp.task('setup', ['pug', 'css', 'less', 'scripts', 'data', 'images', 'deploy'])
