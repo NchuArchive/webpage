@@ -1,0 +1,25 @@
+#outstanding .title {
+  position: center;
+}
+#outstanding .ui.grid {
+  margin-left: 5%;
+}
+#outstanding .session {
+  border-bottom: 3px #b1acac solid;
+  margin-bottom: 25px;
+}
+#outstanding .pic {
+  position: relative;
+  margin-bottom: 10px;
+}
+#outstanding .pic .alu-img {
+  display: block;
+  border-radius: 50%;
+  margin: 0 auto 10px;
+  width: 100%;
+  max-width: 300px;
+}
+#outstanding .pic .alu-name {
+  text-align: center;
+  font-size: 1.4em;
+}
