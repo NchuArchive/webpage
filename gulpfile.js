@@ -1,6 +1,8 @@
-var gulp = require('gulp')
-var $ = require('gulp-load-plugins')()
-var paths = {
+const gulp = require('gulp')
+const ghPages = require('gulp-gh-pages')
+const del = require('del')
+const $ = require('gulp-load-plugins')()
+const paths = {
   src: {
     less: './src/style/less/*.less',
     css: './src/style/css/*.css',
@@ -58,6 +60,10 @@ gulp.task('images', () => {
 gulp.task('deploy', () => {
   return gulp.src('dist/**/*')
     .pipe(ghPages())
+})
+// Cleaning
+gulp.task('clean', () => {
+  return del(['dist/**/*'])
 })
 
 gulp.task('webserver', () => {
