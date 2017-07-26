@@ -18,6 +18,8 @@
   "dependencies": {
     "gulp-imagemin": "^3.0.3",
     "gulp-load-plugins": "^1.3.0",
+    "babel-preset-es2015": "^6.24.1",
+    "gulp-babel": "^6.1.2",
     "gulp-uglify": "^2.0.0",
     "owl.carousel": "^2.2.0"
   }

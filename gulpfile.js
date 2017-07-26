@@ -9,51 +9,54 @@ var paths = {
     data: './src/data/**',
     images: './src/img/**'
   },
-  dest: {
-    html: './dest',
-    css: './dest/style',
-    js: './dest/js',
-    data: './dest/data',
-    images: './dest/img'
+  dist: {
+    html: './dist',
+    css: './dist/style',
+    js: './dist/js',
+    data: './dist/data',
+    images: './dist/img'
   }
 }
 
 gulp.task('pug', () => {
   gulp.src(paths.src.pug)
     .pipe($.pug())
-    .pipe(gulp.dest('./dest'))
+    .pipe(gulp.dest('./dist'))
 })
 
 gulp.task('css', () => {
   gulp.src(paths.src.css)
-    .pipe(gulp.dest(paths.dest.css))
+    .pipe(gulp.dest(paths.dist.css))
 })
 gulp.task('less', () => {
   gulp.src(paths.src.less)
     .pipe($.less())
-    .pipe(gulp.dest(paths.dest.css))
+    .pipe(gulp.dest(paths.dist.css))
 })
 
 gulp.task('scripts', () => {
   gulp.src(paths.src.js)
+    .pipe($.babel({
+      presets: ['es2015']
+    }))
     // .pipe($.uglify())
-    .pipe(gulp.dest(paths.dest.js))
+    .pipe(gulp.dest(paths.dist.js))
 })
 
 gulp.task('data', () => {
   gulp.src(paths.src.data)
-    .pipe(gulp.dest(paths.dest.data))
+    .pipe(gulp.dest(paths.dist.data))
 })
 
 gulp.task('images', () => {
   gulp.src(paths.src.images)
     .pipe($.imagemin())
-    .pipe(gulp.dest(paths.dest.images))
+    .pipe(gulp.dest(paths.dist.images))
 })
 
 gulp.task('webserver', () => {
   gulp
-    .src(paths.dest.html)
+    .src(paths.dist.html)
     .pipe($.webserver({
       port: 8080,
       livereload: true,
