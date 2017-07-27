@@ -15,6 +15,8 @@
       var combHeight = 0
       var num = 0
       var $wrapper = null
+      var edgeWidth = 0
+      var newWidth = 0
 
       /**
        * Build the dom
