@@ -1,12 +1,14 @@
 const gulp = require('gulp')
 const ghPages = require('gulp-gh-pages')
 const del = require('del')
+const runSequence = require('run-sequence')
 const $ = require('gulp-load-plugins')()
 const paths = {
   src: {
     less: './src/style/less/*.less',
     css: './src/style/css/*.css',
     js: './src/js/*.js',
+    lib: './src/js/lib/*.js',
     pug: './src/pug/*.pug',
     data: './src/data/**',
     images: './src/img/**'
@@ -15,6 +17,7 @@ const paths = {
     html: './dist',
     css: './dist/style',
     js: './dist/js',
+    lib: './dist/js/lib/*.js',
     data: './dist/data',
     images: './dist/img'
   }
@@ -41,8 +44,12 @@ gulp.task('scripts', () => {
     .pipe($.babel({
       presets: ['es2015']
     }))
-    // .pipe($.uglify())
+    .pipe($.uglify())
     .pipe(gulp.dest(paths.dist.js))
+})
+gulp.task('lib', () => {
+  gulp.src(paths.src.lib)
+    .pipe(gulp.dest(paths.dist.lib))
 })
 
 gulp.task('data', () => {
@@ -83,5 +90,7 @@ gulp.task('watch', () => {
 })
 
 gulp.task('default', ['webserver', 'watch'])
-gulp.task('build', ['pug', 'css', 'less', 'scripts', 'data'])
-gulp.task('setup', ['pug', 'css', 'less', 'scripts', 'data', 'images', 'deploy'])
+gulp.task('build', ['pug', 'css', 'less', 'scripts', 'lib', 'data'])
+gulp.task('setup', () => {
+  runSequence('clean', ['pug', 'css', 'less', 'scripts', 'lib', 'data', 'images'], 'deploy')
+})
