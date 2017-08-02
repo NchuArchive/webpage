@@ -17,7 +17,7 @@ const paths = {
     html: './dist',
     css: './dist/style',
     js: './dist/js',
-    lib: './dist/js/lib/*.js',
+    lib: './dist/js/lib/',
     data: './dist/data',
     images: './dist/img'
   }
