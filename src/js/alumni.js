@@ -8,7 +8,7 @@ var outstanding = new Vue({
   computed: {
   },
   mounted() {
-    $.getJSON('/data/outstanding.json').then((data) => {
+    $.getJSON('./data/outstanding.json').then((data) => {
       this.outstanding = data
     })
   },

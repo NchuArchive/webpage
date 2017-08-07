@@ -11,8 +11,8 @@ block content
         | 屆
       .ui.stackable.grid
         .four.wide.column.pic(v-for='data in sessions')
-          a(:href='"/data/pdf/" + data.num + ".pdf"', target='_blank')
-            img.alu-img(:src='"/img/outstanding/" + data.num + "_" + data.name + ".png"')
+          a(:href='"./data/pdf/" + data.num + ".pdf"', target='_blank')
+            img.alu-img(:src='"./img/outstanding/" + data.num + "_" + data.name + ".png"')
             p.alu-name {{ data.name }}
 block js
-  script(src='/js/alumni.js')
+  script(src='./js/alumni.js')
