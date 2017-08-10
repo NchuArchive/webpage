@@ -37,7 +37,7 @@ block content
             span.cd-date {{ event.date }}
             h2.timelineTitle {{ event.title }}
             p.text(v-html='event.text')
-            img.media(v-bind:data-original='event.media' v-if='event.media != "null"')
+            img.media(v-bind:src='event.media' v-if='event.media !== "null"')
             //- p {{ event.media }}
             p.mediaCaption {{ event.caption }}
             p.mediaCredit {{ event.credit }}
