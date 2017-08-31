@@ -14,10 +14,6 @@ block content
 
       .ui.stackable.grid
         .four.wide.column.pic(v-for='data in sessions')
-          //- a(:href='"./data/pdf/" + data.num + ".pdf"', target='_blank')
-          //-   img.alu-img(:src='"./img/outstanding/" + data.num + "_" + data.name + ".png"')
-          //-   p.alu-name {{ data.name }}
-
           .ui.special.cards
             .ui.card
               a.image(:href='"./data/pdf/" + data.num + ".pdf"', target='_blank')

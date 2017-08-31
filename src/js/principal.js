@@ -22,7 +22,7 @@ var principal = new Vue({
   methods: {
     showInfo(num) {
       this.principalInfo = this.principals[num]['info']
-      $('#principal .modal').modal('show')
+      $('.modal').modal('show')
     }
   }
 })
