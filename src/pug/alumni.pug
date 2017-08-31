@@ -6,7 +6,7 @@ block content
     h1.title 傑出校友
     .alumni_center
       p 資料來源：
-        a(href='#link') 校友中心
+        a(href='http://alumni.nchu.edu.tw/') 校友中心
     .outstanding(v-for='sessions, index in outstanding')
       h2.session
         | 第
@@ -25,7 +25,7 @@ block content
                 p.header(:href='"./data/pdf/" + data.num + ".pdf"', target='_blank') {{ data.name }}
     .alumni_center
       p 資料來源：
-        a(href='#link') 校友中心
+        a(href='http://alumni.nchu.edu.tw/') 校友中心
 
           
 
