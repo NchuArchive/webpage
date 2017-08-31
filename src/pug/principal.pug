@@ -7,7 +7,7 @@ block content
     .ui.special.cards
       .ui.card(v-for='(principal, val) in principals', @click='showInfo(val)')
         a.image(href='#')
-          img.lazy(v-bind:src='principal.img')
+          img.lazy(:src='principal.img')
         .content
           p.header(href='#') {{ principal.title }}
           .meta

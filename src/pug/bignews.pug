@@ -4,28 +4,28 @@ block css
   link(rel='stylesheet', type='text/css', href='./style/bignews.css')
 block content
   #bigNews.ui.container(v-cloak)
-    h1.title 校史大事記 - {{ timeline['title'] }}
+    h1.title 校史大事記 一 {{ timeline['title'] }}
     #periods
       button.ui.blue.button(v-on:click='selectPeriods=0')
         | 台灣總督府時期
         br
-        | 1912~1928
+        | 1912-1928
       button.ui.blue.button(v-on:click='selectPeriods=1')
         | 台北帝國大學時期
         br
-        | 1928~1943
+        | 1928-1943
       button.ui.blue.button(v-on:click='selectPeriods=2')
         | 台灣總督府台中農林學校時期
         br
-        | 1943~1945
+        | 1943-1945
       button.ui.blue.button(v-on:click='selectPeriods=3')
         | 省立農學院時期
         br
-        | 1945~1971
+        | 1945-1971
       button.ui.blue.button(v-on:click='selectPeriods=4')
         | 國立中興大學時期
         br
-        | 1971~至今
+        | 1971-至今
     #news
       section#cd-timeline.cd-container
         .cd-timeline-block(v-for='event in timeline["news"]')

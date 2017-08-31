@@ -11,14 +11,23 @@ block content
       h2.session
         | 第
         | {{ index+1 }}
-        | 屆
+        | 屆 (
+        | {{ 1997+index }}
+        | 年)
+
       .ui.stackable.grid
         .four.wide.column.pic(v-for='data in sessions')
-          a(:href='"./data/pdf/" + data.num + ".pdf"', target='_blank')
-            img.alu-img(:src='"./img/outstanding/" + data.num + "_" + data.name + ".png"')
-            p.alu-name {{ data.name }}
+          .ui.special.cards
+            .ui.card
+              a.image(:href='"./data/pdf/" + data.num + ".pdf"', target='_blank')
+                img.lazy(:src='"./img/outstanding/" + data.num + "_" + data.name + ".png"')
+              .content
+                p.header(:href='"./data/pdf/" + data.num + ".pdf"', target='_blank') {{ data.name }}
     .alumni_center
       p 資料來源：
         a(href='#link') 校友中心
+
+          
+
 block js
   script(src='./js/alumni.js')
