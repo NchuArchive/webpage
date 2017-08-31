@@ -4,6 +4,9 @@ block css
 block content
   #outstanding.ui.container
     h1.title 傑出校友
+    .alumni_center
+      p 資料來源：
+        a(href='#link') 校友中心
     .outstanding(v-for='sessions, index in outstanding')
       h2.session
         | 第
@@ -14,5 +17,8 @@ block content
           a(:href='"./data/pdf/" + data.num + ".pdf"', target='_blank')
             img.alu-img(:src='"./img/outstanding/" + data.num + "_" + data.name + ".png"')
             p.alu-name {{ data.name }}
+    .alumni_center
+      p 資料來源：
+        a(href='#link') 校友中心
 block js
   script(src='./js/alumni.js')
