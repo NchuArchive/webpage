@@ -1,0 +1,30 @@
+#special a,
+#special p {
+  font-size: 18px;
+}
+#special img {
+  width: 100%;
+}
+#special .book {
+  width: 50%;
+  align: middle;
+}
+#special .webView {
+  display: flex;
+  align-items: center;
+}
+#special p {
+  text-indent: 2em;
+}
+@media only screen and (max-width: 723px) {
+  #special .column {
+    width: 100% !important;
+    align-items: center;
+  }
+}
+@media only screen and (max-width: 767px) {
+  #special {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}

@@ -1,0 +1,102 @@
+#slider {
+  margin-top: 16px;
+}
+#slider img {
+  margin: 0 auto;
+  width: 100%;
+  display: block;
+}
+#slider .owl-stage-outer {
+  box-shadow: 3px 4px 10px 0px rgba(0, 0, 0, 0.18);
+}
+#slider .item {
+  position: relative;
+}
+#slider a {
+  border-radius: 5px;
+  text-decoration: none;
+  position: absolute;
+  bottom: 5px;
+  right: 10px;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 5px 15px;
+}
+#exhibition {
+  width: 100%;
+  display: block;
+  margin: 15px auto;
+}
+#exhibition button {
+  width: 100%;
+}
+#introduce {
+  width: 100%;
+  margin-bottom: 20px;
+}
+#introduce .honeycombs {
+  padding: 10px 0px;
+}
+#introduce .honeycombs .inner_span {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+#introduce .honeycombs .inner-text {
+  padding-top: 40%;
+  font-size: 20px;
+}
+#introduce .hex_inner {
+  box-shadow: 4px 1px 7px 0px #888888;
+}
+#introduceMob {
+  display: none;
+  margin-bottom: 15px;
+  align-items: center;
+  justify-content: center;
+}
+#introduceMob .menu {
+  height: 100%;
+}
+#introduceMob img {
+  height: 100%;
+}
+#introduceMob .cards {
+  display: flex;
+  justify-content: center;
+}
+#introduceMob .card {
+  width: 45%;
+}
+#introduceMob .ui.dimmer {
+  display: block;
+  opacity: 0;
+  transition: opacity 0.5s ease-out;
+  -moz-transition: opacity 0.5s ease-out;
+  -webkit-transition: opacity 0.5s ease-out;
+  -o-transition: opacity 0.5s ease-out;
+}
+#introduceMob .dimmable.image:hover .ui.dimmer {
+  opacity: 1;
+}
+@media screen and (min-width: 1200px) {
+  #introduce {
+    height: 600px;
+  }
+  #introduceMob {
+    display: none;
+  }
+}
+@media screen and (min-width: 491px) and (max-width: 687px) {
+  #introduce {
+    height: 1260px;
+  }
+}
+@media screen and (max-width: 490px) {
+  #introduce {
+    display: none;
+  }
+  #introduceMob {
+    display: inline-flex;
+  }
+}
+#history img {
+  width: 100%;
+}

@@ -1,0 +1,26 @@
+#rules h1 {
+  text-align: center;
+}
+#rules h2 {
+  text-align: center;
+  font-size: 1.5em;
+}
+#rules .date {
+  text-align: right;
+}
+#rules .apply {
+  text-align: left;
+  margin-left: 1.9em;
+  color: #a0a0a0;
+}
+#rules ul {
+  list-style-type: none;
+}
+#rules ul li {
+  font-size: 1.2em;
+  margin: 0 0 1em;
+  line-height: 1.4285em;
+}
+#rules ul li p {
+  margin: 0.5em 0 0.5em 1em;
+}
