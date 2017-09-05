@@ -19,10 +19,10 @@ block content
         .four.wide.column.pic(v-for='data in sessions')
           .ui.special.cards
             .ui.card
-              a.image(:href='"./data/pdf/" + data.num + ".pdf"', target='_blank')
+              a.image(:href='"/data/pdf/" + data.num + ".pdf"', target='_blank')
                 img.lazy(:src='"./img/outstanding/" + data.num + "_" + data.name + ".png"')
               .content
-                p.header(:href='"./data/pdf/" + data.num + ".pdf"', target='_blank') {{ data.name }}
+                p.header(:href='"/data/pdf/" + data.num + ".pdf"', target='_blank') {{ data.name }}
     .alumni_center
       p 資料來源：
         a(href='http://alumni.nchu.edu.tw/' target='_blank') 校友中心
