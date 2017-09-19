@@ -8,8 +8,11 @@ $(document).ready(() => {
     margin: 10,
     dots: true,
     items: 1,
-    autoplay: true,
+    autoplay: false,
     autoplayTimeout: 5000,
-    lazyLoad: true
+    lazyLoad: true,
+    video: true,
+    videoWidth: 500,
+    viedeoHeight: 200,
   })
 })
