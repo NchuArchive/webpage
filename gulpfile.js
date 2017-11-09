@@ -66,11 +66,6 @@ gulp.task('images', () => {
     .pipe(gulp.dest(paths.dist.images))
 })
 
-// gh-pages
-gulp.task('deploy', () => {
-  return gulp.src('dist/**/*')
-    .pipe(ghPages())
-})
 // Cleaning
 gulp.task('clean', () => {
   return del(['dist/**/*'])
