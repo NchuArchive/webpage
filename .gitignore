@@ -39,9 +39,10 @@ jspm_packages
 
 # Optional REPL history
 .node_repl_history
-dist/
 .vscode
 yarn.lock
 
 # Gulp Build File
+dist/
 dest/
+.publish
