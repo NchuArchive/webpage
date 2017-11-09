@@ -46,7 +46,7 @@ gulp.task('scripts', () => {
     .pipe($.babel({
       presets: ['es2015']
     }))
-    // .pipe($.uglify())
+    .pipe($.uglify())
     .pipe(gulp.dest(paths.dist.js))
 })
 gulp.task('lib', () => {
