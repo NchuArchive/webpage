@@ -1,18 +1,1 @@
-#schoolView img {
-  height: 200px;
-}
-#schoolView .cards {
-  display: flex;
-  justify-content: center;
-}
-#schoolView .ui.dimmer {
-  display: block;
-  opacity: 0;
-  transition: opacity 0.5s ease-out;
-  -moz-transition: opacity 0.5s ease-out;
-  -webkit-transition: opacity 0.5s ease-out;
-  -o-transition: opacity 0.5s ease-out;
-}
-#schoolView .dimmable.image:hover .ui.dimmer {
-  opacity: 1;
-}
+#schoolView img{height:200px}#schoolView .cards{display:flex;justify-content:center}#schoolView .ui.dimmer{display:block;opacity:0;transition:opacity .5s ease-out;-moz-transition:opacity .5s ease-out;-webkit-transition:opacity .5s ease-out;-o-transition:opacity .5s ease-out}#schoolView .dimmable.image:hover .ui.dimmer{opacity:1}

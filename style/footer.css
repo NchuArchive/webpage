@@ -1,18 +1,1 @@
-#footer {
-  margin-top: 80px;
-}
-#footer #footBlock {
-  margin-top: 25px;
-  background-color: #EFF0F4;
-}
-#footer #footBlock #footerLogo {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-#footer #footBlock #footerLogo img {
-  width: 100%;
-}
-#footer #footBlock #footerConnection i {
-  margin-right: 5px;
-}
+#footer{margin-top:80px}#footer #footBlock{margin-top:25px;background-color:#eff0f4}#footer #footBlock #footerLogo{display:flex;align-items:center;justify-content:center}#footer #footBlock #footerLogo img{width:100%}#footer #footBlock #footerConnection i{margin-right:5px}

@@ -1,11 +1,1 @@
-'use strict';
-
-$(document).ready(function ($) {
-  $(window).scroll(function () {
-    if ($(window).scrollTop() > 186) {
-      $('#scrollMenu').fadeIn(100);
-    } else {
-      $('#scrollMenu').fadeOut(100);
-    }
-  });
-});
+"use strict";$(document).ready(function(n){n(window).scroll(function(){n(window).scrollTop()>186?n("#scrollMenu").fadeIn(100):n("#scrollMenu").fadeOut(100)})});

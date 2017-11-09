@@ -1,17 +1,1 @@
-'use strict';
-
-$(document).ready(function () {
-  $(window).load(function () {
-    $('.honeycombs').honeycombs();
-  });
-
-  $('.owl-carousel').owlCarousel({
-    loop: true,
-    margin: 10,
-    dots: true,
-    items: 1,
-    autoplay: true,
-    autoplayTimeout: 5000,
-    lazyLoad: true
-  });
-});
+"use strict";$(document).ready(function(){$(window).load(function(){$(".honeycombs").honeycombs()}),$(".owl-carousel").owlCarousel({loop:!0,margin:10,dots:!0,items:1,autoplay:!1,autoplayTimeout:5e3,lazyLoad:!0,video:!0,videoWidth:500,viedeoHeight:200})});

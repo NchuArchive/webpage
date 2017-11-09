@@ -1,10 +1,1 @@
-#principal table {
-  width: 100%;
-}
-#principal table td {
-  font-size: 14px;
-  padding: 10px 0px;
-}
-#principal .ui.special.cards {
-  justify-content: center;
-}
+#principal table{width:100%}#principal table td{font-size:14px;padding:10px 0}#principal .ui.special.cards{justify-content:center}
