@@ -6,14 +6,10 @@ var vm = new Vue({
     }
   },
   mounted() {
-    var api = '16ljIVS5HFnAYtDQ2ILuxZK-Fm_WvUDBamkC6rLrLu_A'
-    var apiUrl = 'http://gsx2json.com/api?id=' + api + '&sheet='
-    var getSheet = $.getJSON(apiUrl)
-
-    var googleSheet = []
+    var getSheet = $.getJSON('../data/schoolView.json')
 
     $.when(getSheet).done((data) => {
-      $.each(data['rows'], (key, val) => {
+      $.each(data, (key, val) => {
         this.cards.push(val)
       })
     })
