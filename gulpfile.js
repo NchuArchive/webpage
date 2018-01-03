@@ -1,5 +1,4 @@
 const gulp = require('gulp')
-const ghPages = require('gulp-gh-pages')
 const del = require('del')
 const runSequence = require('run-sequence')
 const $ = require('gulp-load-plugins')()
@@ -89,6 +88,3 @@ gulp.task('watch', () => {
 
 gulp.task('default', ['webserver', 'watch'])
 gulp.task('build', ['pug', 'css', 'less', 'scripts', 'lib', 'data'])
-// gulp.task('setup', () => {
-//   runSequence('clean', ['pug', 'css', 'less', 'scripts', 'lib', 'data', 'images'], 'deploy')
-// })
