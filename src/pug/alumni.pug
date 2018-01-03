@@ -10,9 +10,9 @@ block content
     .outstanding(v-for='sessions, index in outstanding')
       h2.session
         | 第
-        | {{ index+1 }}
+        | {{ outstanding.length-index }}
         | 屆 (
-        | {{ 1997+index }}
+        | {{ 2017-index }}
         | 年)
 
       .ui.stackable.grid
