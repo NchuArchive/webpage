@@ -89,6 +89,6 @@ gulp.task('watch', () => {
 
 gulp.task('default', ['webserver', 'watch'])
 gulp.task('build', ['pug', 'css', 'less', 'scripts', 'lib', 'data'])
-gulp.task('setup', () => {
-  runSequence('clean', ['pug', 'css', 'less', 'scripts', 'lib', 'data', 'images'], 'deploy')
-})
+// gulp.task('setup', () => {
+//   runSequence('clean', ['pug', 'css', 'less', 'scripts', 'lib', 'data', 'images'], 'deploy')
+// })
