@@ -83,7 +83,9 @@ gulp.task('webserver', () => {
 gulp.task('watch', () => {
   gulp.watch(paths.src.pug, ['pug'])
   gulp.watch(paths.src.less, ['less'])
+  gulp.watch(paths.src.css, ['css'])
   gulp.watch(paths.src.js, ['scripts'])
+  gulp.watch(paths.src.data, ['data'])
 })
 
 gulp.task('default', ['webserver', 'watch'])
