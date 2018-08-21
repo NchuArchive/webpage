@@ -1,5 +1,5 @@
 doctype html
-html(lang='en')
+html(b:version='2' class='v2' expr:dir='data:blog.languageDirection' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr' xmlns:og='http://ogp.me/ns#', lang='en')
   head
     title 興湖紀事
     meta(charset='UTF-8')
@@ -11,6 +11,15 @@ html(lang='en')
     meta(property='og:url', content='http://archive.nchu.edu.tw/dist/')
     meta(property='og:image', content='http://archive.nchu.edu.tw/dist/img/logo.png')
     meta(property='og:description', content='國立中興大學校史資源網頁')
+    // Open Graph Meta Tags BEGIN
+    meta(expr:content='data:blog.pageName', property='og:title')
+    b:if(cond='data:blog.postImageThumbnailUrl')
+      meta(expr:content='data:blog.postImageThumbnailUrl', property='og:image')
+    meta(expr:content='data:blog.title', property='og:title')
+    meta(expr:content='data:blog.canonicalUrl', property='og:url')
+    b:if(cond='data:blog.metaDescription')
+      meta(expr:content='data:blog.metaDescription', property='og:description')
+    // Open Graph Meta Tags END
     link(rel='shortcut icon' type='image/x-icon' href='./img/favicon.ico')
     link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.css')
     link(rel='stylesheet', href='//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css')
