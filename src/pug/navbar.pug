@@ -2,7 +2,7 @@
   #logo.ui.container
     a(href='./index.html')
       img(src='./img/logo.png')
-#topMenu.tab-nav
+mixin menu
   ul
     li
       a(href='./alumni.html') 興大人
@@ -43,7 +43,13 @@
         a(href='http://archive.nchu.edu.tw/comic_school_history/book5.html' target='_blank') 校史館篇
         a(href='http://archive.nchu.edu.tw/comic_school_history/book6.html' target='_blank') 四大林場
 
+#topMenu.tab-nav
+  +menu
+
 #scrollMenu.tab-nav
+  +menu
+
+//-
   ul
     li
       a(href='./alumni.html') 興大人
