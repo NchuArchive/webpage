@@ -1,0 +1,16 @@
+extends layout
+block css
+  link(rel='stylesheet' type='text/css' href='./style/comic.css')
+block content
+  -
+    var list = ["中興湖篇", "圖書館篇", "校園變遷篇", "學餐 小禮堂 頂橋仔", "校史館篇", "四大林場"]
+  #comic.ui.container.animated.fadeIn
+    h1.title 漫畫校史
+    .list-box
+      each value, index in list
+        .list-item
+          a(href='http://archive.nchu.edu.tw/comic_school_history/book' + (index+1) + '.html#book' + (index+1) + '/page1')
+            img(src='http://archive.nchu.edu.tw/comic_school_history/images/p' + (index+1) + '_1.jpg' alt=value + "封面" width='100%')
+            br
+            = value
+
