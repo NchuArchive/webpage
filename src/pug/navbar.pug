@@ -2,8 +2,10 @@
   #logo.ui.container
     a(href='./index.html')
       img(src='./img/logo.png')
-mixin menu
-  ul
+
+
+#topMenu.tab-nav
+  ul.topnav
     li
       a(href='./alumni.html') 興大人
     li.dropdown
@@ -36,48 +38,32 @@ mixin menu
     li
       a(href='./comic.html') 漫畫校史
 
-#topMenu.tab-nav
-  +menu
+#topMenu_small.sidenav
+  a.closebtn(href='javascript:void(0)' onclick='closeNav()')
+    button.ui.icon.button
+      i.fas.fa-times
+  a(href='./alumni.html') 興大人
+  a 關於興大
+  a.droplist(href='./word.html') 校訓
+  a.droplist(href='./emblem.html') 校徽
+  a.droplist(href='./song.html') 校歌
+  a.droplist(href='./flag.html') 校旗
+  a.droplist(href='./flowertree.html') 校花校樹
+  a.droplist(href='./principal.html') 歷屆校長
+  a.droplist(href='http://archive.nchu.edu.tw/Hsing_History/') 校史地景導覽
+  a(href='./schoolView.html') 校園風華
+  a(href='./bignews.html') 大事紀
+  a 認識校史館
+  a.droplist(href='./origin.html') 校史館緣起
+  a.droplist(href='./rules.html') 校史館規章
+  a.droplist(href='http://archive.nchu.edu.tw/Hsing_Views/') 校史館360度環景
+  a 參觀校史館
+  a.droplist(href='./visit.html') 參觀資訊
+  a.droplist(href='./visitor.html') 訪客足跡
+  a(href='./comic.html') 漫畫校史
 
-#scrollMenu.tab-nav
-  +menu
 
-//-
-  ul
-    li
-      a(href='./alumni.html') 興大人
-      li.dropdown
-        a.dropbtn 關於興大
-        .dropdown-content
-          a(href='./word.html') 校訓
-          a(href='./emblem.html') 校徽
-          a(href='./song.html') 校歌
-          a(href='./flag.html') 校旗
-          a(href='./flowertree.html') 校花校樹
-          a(href='./principal.html') 歷屆校長
-          a(href='http://archive.nchu.edu.tw/Hsing_History/') 校史地景導覽
-    li
-      a(href='./schoolView.html') 校園風華
-    li
-      a(href='./bignews.html') 大事紀
-    li
-      a(href='./special.html') 興大特藏
-    li.dropdown
-      a.dropbtn 認識校史館
-      .dropdown-content
-        a(href='./origin.html') 校史館緣起
-        a(href='./rules.html') 校史館規章
-        a(href='http://archive.nchu.edu.tw/Hsing_Views/') 校史館360度環景
-    li.dropdown
-      a.dropbtn 參觀校史館
-      .dropdown-content
-        a(href='./visit.html') 參觀資訊
-        a(href='./visitor.html') 訪客足跡
-    li.dropdown
-      a.dropbtn 漫畫校史
-      .dropdown-content
-        a(href='http://archive.nchu.edu.tw/comic_school_history/book1.html' target='_blank') 中興湖篇
-        a(href='http://archive.nchu.edu.tw/comic_school_history/book2.html' target='_blank') 圖書館篇
-        a(href='http://archive.nchu.edu.tw/comic_school_history/book3.html' target='_blank') 校園變遷篇
-        a(href='http://archive.nchu.edu.tw/comic_school_history/book4.html' target='_blank') 學餐 小禮堂 頂橋仔
-        a(href='http://archive.nchu.edu.tw/comic_school_history/book5.html' target='_blank') 校史館篇
+div.topnav_s(style='font-size:30px; cursor:pointer' onclick='openNav()')
+  button.ui.icon.button
+    i.fas.fa-bars
+
