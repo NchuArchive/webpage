@@ -1,0 +1,36 @@
+#exhibition {
+  a, p {
+    font-size: 18px;
+  }
+  img {
+    width: 100%;
+  }
+  .book {
+    width: 50%;
+  }
+  .btn {
+    padding: 0.9em 2em;
+    background-color: #71ccff;
+    border-radius: 5%;
+    color: #fdfdfd;
+
+  }
+  .webView {
+    display: flex;
+    align-items: center;
+  }
+  p {
+    text-indent: 2em;
+  }
+  .column {
+    @media only screen and (max-width: 723px) {
+      width: 100% !important;
+      align-items: center;
+
+    }
+  }
+  @media only screen and (max-width: 767px) {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}

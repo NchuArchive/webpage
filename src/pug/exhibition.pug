@@ -1,0 +1,26 @@
+extends layout
+block css
+  link(rel='stylesheet', type='text/css', href='./style/exhibition.css')
+block content
+  #exhibition.ui.container.animated.fadeIn
+    h1.title 2019校史館特展 - 穿越時空的情報員
+    div
+      img(src='./img/exhibition/2019post.jpg' style='float:left;width: 45%;margin: 2.5%')
+      div(style='float:left;padding: 2rem;')
+        p(style='font-size: 16px;')
+          | 校史館，一年一特展。
+          br
+          | 100週年校慶，隆重獻映—穿越時空の情報員！
+          br
+          | 歡迎中興特工們蒞臨，跟我們一起穿越校史，燒腦玩遊戲
+          br
+        img(src='./img/exhibition/2019-3.png' style='width: 400px; height: 400px;clear:both;')
+        br
+        img(src='./img/exhibition/2019-2.png' style='max-width:400px;width: auto;height: auto;clear:both;')
+        h2 參觀資訊
+        p(style='font-size: 16px;') 每週一、三、五 10:00~16:00
+          br
+          | 本館參觀詳情請見
+          a(href='./visit.html') 參觀資訊
+block js
+  script(src='./js/special.js')
