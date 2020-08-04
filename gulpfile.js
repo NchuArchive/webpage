@@ -1,7 +1,10 @@
-const gulp = require('gulp')
+const { gulp, src, dest, series, parallel } = require('gulp')
+const babel = require('gulp-babel');
+const uglify = require('gulp-uglify');
 const del = require('del')
 const runSequence = require('run-sequence')
 const $ = require('gulp-load-plugins')()
+const browserSync = require('browser-sync').create();
 const paths = {
   src: {
     less: './src/style/less/*.less',
@@ -22,71 +25,71 @@ const paths = {
   }
 }
 
-gulp.task('pug', () => {
-  gulp.src(paths.src.pug)
+function pug () {
+  return src(paths.src.pug)
     .pipe($.pug())
-    .pipe(gulp.dest('./dist'))
-})
+    .pipe(dest('./dist'))
+}
 
-gulp.task('css', () => {
-  gulp.src(paths.src.css)
+function css () {
+  return src(paths.src.css)
     .pipe($.cleanCss({ compatibility: '*'}))
-    .pipe(gulp.dest(paths.dist.css))
-})
-gulp.task('less', () => {
-  gulp.src(paths.src.less)
+    .pipe(dest(paths.dist.css))
+}
+
+function less () {
+  return src(paths.src.less)
     .pipe($.less())
     .pipe($.cleanCss({ compatibility: '*'}))
-    .pipe(gulp.dest(paths.dist.css))
-})
+    .pipe(dest(paths.dist.css))
+}
 
-gulp.task('scripts', () => {
-  gulp.src(paths.src.js)
-    .pipe($.babel({
-      presets: ['es2015']
+function scripts () {
+  return src(paths.src.js)
+    .pipe(babel({
+      presets: ['env']
     }))
-    .pipe($.uglify())
-    .pipe(gulp.dest(paths.dist.js))
-})
-gulp.task('lib', () => {
-  gulp.src(paths.src.lib)
-    .pipe($.uglify())
-    .pipe(gulp.dest(paths.dist.lib))
-})
+    .pipe(uglify())
+    .pipe(dest(paths.dist.js))
+}
 
-gulp.task('data', () => {
-  gulp.src(paths.src.data)
-    .pipe(gulp.dest(paths.dist.data))
-})
+function lib () {
+  return src(paths.src.lib)
+    .pipe($.uglify())
+    .pipe(dest(paths.dist.lib))
+}
 
-gulp.task('images', () => {
-  gulp.src(paths.src.images)
+function data () {
+  return src(paths.src.data)
+    .pipe(dest(paths.dist.data))
+}
+
+function images () {
+  return src(paths.src.images)
     .pipe($.imagemin())
-    .pipe(gulp.dest(paths.dist.images))
-})
+    .pipe(dest(paths.dist.images))
+}
 
 // Cleaning
-gulp.task('clean', () => {
+function clean () {
   return del(['dist/**/*'])
-})
+}
 
-gulp.task('webserver', () => {
-  gulp
-    .src(paths.dist.html)
-    .pipe($.webserver({
-      port: 8080,
-      livereload: true,
-      directoryListing: false
-    }))
-})
+function serve () {
+  browserSync.init({
+    server: {
+      baseDir: paths.dist.html
+    }
+  });
+}
 
-gulp.task('watch', () => {
+function watch () {
   gulp.watch(paths.src.pug, ['pug'])
   gulp.watch(paths.src.less, ['less'])
   gulp.watch(paths.src.css, ['css'])
   gulp.watch(paths.src.js, ['scripts'])
   gulp.watch(paths.src.data, ['data'])
-})
+}
 
-gulp.task('default', ['webserver', 'watch'])
-gulp.task('build', ['pug', 'css', 'less', 'scripts', 'lib', 'data'])
+exports.default = series(serve, watch)
+exports.build = parallel(pug, css, less, scripts, lib, data)
