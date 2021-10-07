@@ -4,6 +4,7 @@ block css
 block content
   #principal.ui.container
     h1.title 歷任校長
+    
     .ui.special.cards
       .ui.card(v-for='(principal, val) in principals', @click='showInfo(val)')
         a.image(href='#')

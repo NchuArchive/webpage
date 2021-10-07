@@ -8,7 +8,7 @@ var principal = new Vue({
   },
   mounted() {
     var api = '1MA_7CkvGzbdhkiarcvOqcWrYBWS-gGI804ymEkU0afM'
-    var apiUrl = 'http://gsx2json.com/api?id=' + api + '&sheet='
+    var apiUrl = 'http://gsx2json.com/api?id=' + api + '&sheet=worksheet'
     var getSheet = $.getJSON(apiUrl)
 
     var googleSheet = []
