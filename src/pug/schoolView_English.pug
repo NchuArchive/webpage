@@ -1,0 +1,22 @@
+extends layout_English
+block css
+  link(rel='stylesheet', type='text/css', href='./style/schoolView.css')
+block content
+  #schoolView.ui.container.animated.fadeIn
+    h1.title Campus
+    
+    .ui.special.cards.animated.fadeIn
+      .card(v-for='card in cards')
+        .blurring.dimmable.image
+          .ui.dimmer
+            .content
+              .center
+                a.ui.inverted.button(:href='card.url', target='_blank') Details
+          img(:src='card.image')
+        .content
+          a.header(:href='card.url', target='_blank') {{ card.context }}
+          .meta
+            span {{ card.title }}
+
+block js
+  script(src='./js/schoolView.js')

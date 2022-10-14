@@ -1,0 +1,57 @@
+doctype html
+html(b:version='2' class='v2' expr:dir='data:blog.languageDirection' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr' xmlns:og='http://ogp.me/ns#', lang='en')
+  head
+    title 興湖紀事
+    meta(charset='UTF-8')
+    link(rel='shortcut icon' type='image/x-icon' href='./img/favicon.ico')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    meta(name='author', content='YoYoHung, Sakamoto, Ray')
+    meta(property='og:title', content='興湖紀事')
+    meta(name="google-site-verification" content="iGRC59Tc9WxsZByvAwZXvGGdVMxA7yD5erzuU-8080k")
+    meta(property='og:type', content='website')
+    meta(property='og:url', content='http://archive.nchu.edu.tw/dist/')
+    meta(property='og:image', content='http://archive.nchu.edu.tw/dist/img/logo.png')
+    meta(property='og:description', content='國立中興大學校史資源網頁')
+    // Open Graph Meta Tags BEGIN
+    meta(expr:content='data:blog.pageName', property='og:title')
+    b:if(cond='data:blog.postImageThumbnailUrl')
+      meta(expr:content='data:blog.postImageThumbnailUrl', property='og:image')
+    meta(expr:content='data:blog.title', property='og:title')
+    meta(expr:content='data:blog.canonicalUrl', property='og:url')
+    b:if(cond='data:blog.metaDescription')
+      meta(expr:content='data:blog.metaDescription', property='og:description')
+    // Open Graph Meta Tags END
+    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.0/semantic.min.css')
+    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css')
+    link(rel='stylesheet', href='./style/loader.css')
+    link(rel='stylesheet', href='./style/animate.css')
+    link(rel='stylesheet', href='./style/main.css')
+    link(rel='stylesheet', href='./style/navbar.css')
+    link(rel='stylesheet', href='./style/footer.css')
+    script(async='', src='https://www.googletagmanager.com/gtag/js?id=UA-130581277-1')
+    script.
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-130581277-1');
+    block css
+
+  body
+    include ./navbar_English.pug
+    #loading
+      .loader Loading...
+    .waitload
+      block content
+    .waitload
+      include ./footer_English.pug
+
+    script(src='https://code.jquery.com/jquery-2.2.4.min.js')
+    script(src='./js/lib/jquery.lazyload.min.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.10/vue.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.0/semantic.min.js')
+    script(src='./js/topSection.js')
+    script(src='./js/main.js')
+    script(src='./js/navbar.js')
+    block js

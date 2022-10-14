@@ -1,0 +1,112 @@
+extends layout_English
+block css
+  link(rel='stylesheet', type='text/css', href='./style/homeycombs.css')
+
+  link(rel='stylesheet', type='text/css', href='./style/owl.carousel.min.css')
+  link(rel='stylesheet', type='text/css', href='./style/owl.theme.default.min.css')
+  link(rel='stylesheet', type='text/css', href='./style/index.css')
+block content
+  .ui.container
+    #slider
+      .owl-carousel.owl-theme
+        .item
+          img.lazy(src='./img/slide/slide11.jpg')
+          a(href='http://archive.nchu.edu.tw/dist/exhibition.html', target='_blank') More...
+        .item
+          img.lazy(src='./img/slide/slide9.jpg')
+          a(href='http://archive.nchu.edu.tw/comic_school_history/book6.html', target='_blank') 線上看
+        .item
+          img.lazy(src='./img/slide/slide8.jpg')
+          a(href='http://archive.nchu.edu.tw/comic_school_history/book3.html', target='_blank') 線上看
+        .item
+          img.lazy(src='./img/slide/slide7.jpg')
+          a(href='http://archive.nchu.edu.tw/comic_school_history/book2.html', target='_blank') 線上看
+        .item
+          img.lazy(src='./img/slide/slide5.png')
+          a(href='http://archive.nchu.edu.tw/comic_school_history/book1.html', target='_blank') 線上看
+        .item
+          img.lazy(src='./img/slide/slide1.jpg')
+          a(href='http://archive.nchu.edu.tw/Hsing_Views/', target='_blank') Link
+        .item
+          img.lazy(src='./img/slide/slide3.jpg')
+          a(href='http://archive.nchu.edu.tw/Hsing_History/', target='_blank') Link
+        //- .item
+        //-   a.owl-video(href='https://youtu.be/vA7KWgBCmME')
+
+    //- #exhibition
+    //-   .ui.equal.width.grid
+    //-     .column
+    //-       button.ui.teal.button 興大特藏
+    //-     .column
+    //-       button.ui.teal.button 印象之外特展
+
+    #introduce
+      .honeycombs
+        a.comb(href='./principal_English.html')
+          img.lazy(src='./img/principal.png')
+          //- 歷屆校長
+          span
+        a.comb(href='./special_English.html')
+          img.lazy(src='./img/pineapple.png')
+          //- 興大特藏
+          span
+        //-a.comb(href='./bignews.html')
+          img.lazy(src='./img/index/honeycombs3.png')
+            //- 大事紀
+          span //先不放大事紀
+        a.comb(href='http://archive.nchu.edu.tw/Hsing_History/', target='_blank')
+          img.lazy(src='./img/schoolview.png')
+            //- 校景導覽
+          span
+
+        a.comb(href='//ir.lib.nchu.edu.tw/')
+          img.lazy(src='./img/dspace.png')
+          //- 機構典藏
+          span
+        a.comb(href='./schoolView_English.html')
+          img.lazy(src='./img/liquidambar.png')
+          span
+          //- span 校園風華
+        a.comb(href='http://archive.nchu.edu.tw/Hsing_Views/', target='_blank')
+          img.lazy(src='./img/360.png')
+            //- 360°環景
+          span
+
+        a.comb(href='https://secret.nchu.edu.tw/校友中心/傑出校友/')
+          img.lazy(src='./img/alumni.png')
+            //- 興大人
+          span
+        a.comb(href='./audiohistory.html')
+          img.lazy(src='./img/talk.png')
+          //- img.lazy(src='./img/index/honeycombs9.png')
+          //- 口述校史
+          span
+
+        a.comb(href='./visitor_English.html')
+          img.lazy(src='./img/footprint.png')
+          //- 訪客足跡
+          span
+        a.comb(href='http://www.nchu.edu.tw/index1.php')
+          img.lazy(src='./img/nchu.jpg')
+            //- 中興首頁
+          span
+
+
+    #introduceMob
+      .ui.vertical.menu
+        a.item(href='./principal_English.html') History of the presidency
+        a.item(href='./alumni.html') Alumni center
+        a.item(href='./special_English.html') Special collection
+        a.item(href='//ir.lib.nchu.edu.tw/') NCHU Institutional Repository
+        a.item(href='./bignews.html') Events
+        a.item(href='http://archive.nchu.edu.tw/Hsing_History/') Guide map
+        a.item(href='http://archive.nchu.edu.tw/Hsing_Views/') 360°-degree panorama
+        a.item(href='./visitor_English.html') Visitor trails
+        a.item(href='./schoolView_English.html') Campus
+
+    //- include ./introduceMob.pug
+
+block js
+  script(src='./js/lib/jquery.homeycombs.js')
+  script(src='./js/lib/owl.carousel.min.js')
+  script(src='./js/index.js')
