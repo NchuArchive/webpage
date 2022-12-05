@@ -25,7 +25,11 @@ block content
       button.ui.blue.button(v-on:click='selectPeriods=4')
         | 國立中興大學時期
         br
-        | 1971-至今
+        | 1971-2011
+      button.ui.blue.button(v-on:click='selectPeriods=5')
+        | 國立中興大學時期
+        br
+        | 2011-至今
     #news
       section#cd-timeline.cd-container
         .cd-timeline-block(v-for='event in timeline["news"]')
