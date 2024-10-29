@@ -1,0 +1,73 @@
+<!-- layout.html -->
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %} 興湖記事 {% endblock %}</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-[#F4F4EC]">
+    <div class="grid grid-cols-5 gap-4">
+        <div class="col-start-2 col-end-3 flex items-center">
+            <img src="{{ url_for('static', filename="img/logo.png")}}" class="mt-1">
+        </div>
+    </div>
+    <div class="my-4"></div>
+    <nav class="bg-gray-700 py-5">
+        <ul class="flex justify-center">
+            <li class="relative group px-4">
+                <a href="#" class="text-white py-0">興大人<br>NCHU</a>
+                <div class="absolute hidden group-hover:block bg-zinc-50 text-black mt-3 py-5 px-2 rounded-md shadow-xl">
+                    <a href="#" class="block hover:text-gray">校友中心<br>Alumni center</a>
+                    <a href="#" class="block hover:text-gray">南投分部<br>NCHU at NANTOU</a>
+                </div>
+            </li>
+            <li class="relative group px-4">
+                <a href="#" class="text-white px-4 py-2">關於興大<br>about NCHU</a>
+                <div class="absolute hidden group-hover:block bg-zinc-50 text-black mt-3 py-2 px-4 rounded-md shadow-xl">
+                    <a href="#" class="block hover:text-gray">校訓 motto</a>
+                    <a href="#" class="block hover:text-gray">校徽 badge</a>
+                    <a href="#" class="block hover:text-gray">校歌 song</a>
+                    <a href="#" class="block hover:text-gray">校旗 flag</a>
+                    <a href="#" class="block hover:text-gray">校花校樹 plants</a>
+                    <a href="#" class="block hover:text-gray">歷屆校長 History of the presidency</a>
+                    <a href="#" class="block hover:text-gray">校史地景導覽 Guide map</a>
+                </div>
+            </li>
+            <li class="relative group px-4">
+                <a href="#" class="text-white py-0">校園風華<br>Campus</a>
+            </li>
+            <li class="relative group px-4">
+                <a href="#" class="text-white py-0">大事紀<br>Event</a>
+            </li>
+            <li class="relative group px-4">
+                <a href="#" class="text-white py-0">興大特藏<br>Special collection</a>
+                <div class="absolute hidden group-hover:block bg-zinc-50 text-black mt-3 py-5 px-2 rounded-md shadow-xl">
+                    <a href="#" class="block hover:text-gray">數位特藏資料<br>Digital data</a>
+                </div>
+            </li>
+            <li class="relative group px-4">
+                <a href="#" class="text-white py-0">認識校史館<br>Gallery of History</a>
+                <div class="absolute hidden group-hover:block bg-zinc-50 text-black mt-3 py-5 px-2 rounded-md shadow-xl">
+                    <a href="#" class="block hover:text-gray">校史館緣起<br>Origin</a>
+                    <a href="#" class="block hover:text-gray">校史館規章<br>Regulations</a>
+                    <a href="#" class="block hover:text-gray">校史館360度環境<br>360-gegree panorama</a>
+                </div>
+            </li>
+            <li class="relative group px-4">
+                <a href="#" class="text-white py-0">參觀校史館<br>Visit</a>
+                <div class="absolute hidden group-hover:block bg-zinc-50 text-black mt-3 py-5 px-2 rounded-md shadow-xl">
+                    <a href="#" class="block hover:text-gray">參觀資訊<br>Information</a>
+                    <a href="#" class="block hover:text-gray">訪客足跡<br>Visitor trails</a>
+                </div>
+            </li>
+            <li class="relative group px-4">
+                <a href="#" class="text-white py-0">漫畫校史<br>Comic</a>
+            </li>
+            <li class="relative group px-4">
+                <a href="#" class="text-white py-0">校史館特展<br>Special exhibition</a>
+            </li>
+        </ul>
+    </nav>
+      
+      
+</body>
