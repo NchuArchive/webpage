@@ -1,4 +1,5 @@
 extends layout
+
 block css
   link(rel='stylesheet', type='text/css', href='./style/exhibition.css')
 
@@ -8,36 +9,37 @@ block content
     h2.subtitle — 生態、生物、生存主題展 —
     
     .exhibition-banner
-      img(src="{{ url_for('static', filename='exhibition202401.png') }}", alt="湖泥湖圖特展橫幅")
+      img(src="../img/exhibition202401.png", alt="湖泥湖圖特展橫幅")
     
     .exhibition-description
       p(style='font-size: 24px;') 中興湖承載了四十七年的往來，也是中興師生以及鄰里的文化交流地帶，逐一孕育出獨有的地標景色。中興湖是如何被形塑出來？今日又如何發展出連日本都驚嘆的生態？歡迎各位走進展區細細觀賞…
-
+    
     .exhibition-banner
-      img(src="{{ url_for('static', filename='exhibition202402.png') }}", alt="湖泥湖圖特展橫幅")
+      img(src="../img/exhibition202402.png", alt="湖泥湖圖特展橫幅")
     
     .exhibition-sections
       h2 本次特展分為四個小區塊可供參觀：
+      
       .section-content
         h3 ★ 第一部分：「生」在興湖畔、今昔對比 (面對展區入口左邊牆上)
         .exhibition-banner
-          img(src="{{ url_for('static', filename='exhibition202403.png') }}", alt="湖泥湖圖特展橫幅")
+          img(src="../img/exhibition202403.png", alt="湖泥湖圖特展橫幅")
       
       .section-content
         h3 ★ 第二部分：興湖清淤生態趣 (展區入口正對面)
         .exhibition-banner
-          img(src="{{ url_for('static', filename='exhibition202404.png') }}", alt="湖泥湖圖特展橫幅")
+          img(src="../img/exhibition202404.png", alt="湖泥湖圖特展橫幅")
       
       .section-content
         h3 ★ 第三部分：放浪江湖 (面對展區入口右邊牆面)
         .exhibition-banner
-          img(src="{{ url_for('static', filename='exhibition202405.png') }}", alt="湖泥湖圖特展橫幅")
+          img(src="../img/exhibition202405.png", alt="湖泥湖圖特展橫幅")
       
       .section-content
         h3 ★ 第四部分：沒湖說 (面對展區右手邊)
         .exhibition-banner
-          img(src="{{ url_for('static', filename='exhibition202406.png') }}", alt="湖泥湖圖特展橫幅")
-
+          img(src="../img/exhibition202406.png", alt="湖泥湖圖特展橫幅")
+      
       .special-note
         p(style='font-size: 24px;') ★展區中間另設有「互動區」，歡迎蒞臨體驗！
         p(style='font-size: 24px;') ★校史館開放時間：每週一、三、五 早上 10 點至下午 4 點。
