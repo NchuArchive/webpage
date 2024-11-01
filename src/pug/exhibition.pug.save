@@ -1,47 +1,118 @@
 extends layout
 block css
   link(rel='stylesheet', type='text/css', href='./style/exhibition.css')
-
 block content
   #exhibition.ui.container.animated.fadeIn
-    h1.title 2024校史館特展-湖泥湖圖
-    h2.subtitle — 生態、生物、生存主題展 —
+    h1.title 2023校史館特展-興人誌
+    div
+      img(src="./img/exhibition/1.jpg")
+      br
+      div
+        |
+        br
+        p(style="font-size: 24px;")
+            | 興大創校迄今已 104 年，校史館今年配合校慶活動推出 2023 年全新特展 《興人誌》，展出內容係以校史館近年編纂三冊 《興大人物史料彙編一、二、三》 為基礎，共 70 位校史人物之紀念專集，從既有官方的文書檔案、生平著述或自傳，以及親眷、同事、學生撰寫之回憶文字等，透過口述與保存史料，見證興大發展之重要里程碑，邀請您從本展之人物誌內容敘事探索校史人物如何在校園中譜出親子、夫妻、師生之情，歡迎透過觀展、互動與閱讀更了解校史記憶與故事。
+        |
+        br
+        img(src="./img/exhibition/5.jpg")
+        br
+        br
+        br 
+        p(style="font-size: 24px;")
+          | 本次特展分為四個小區塊可供參觀 :
+          br 
+          | ★ 第一部分 : 興大團隊 (面對展區入口左邊牆上)
+          br
+          | 依《興大人物史料彙編 (一)(二)(三)》分為 TEAM1、TEAM2、TEAM3，第一冊收錄 35 人、第二冊 16 人、第三冊 18 人。這些特展主角們的名字羅列於牆上，展場提供書籍翻閱 (閱讀完畢請記得放回原位喔!)。
+          br
+          | * 彙編 (一) 
+          a(href="https://nchu.primo.exlibrisgroup.com/permalink/886NCHU_INST/2sntbr/alma990073244120107976" style="font-size: 24px;") 館藏連結
+          br
+          | * 彙編 (二) 
+          a(href="https://nchu.primo.exlibrisgroup.com/permalink/886NCHU_INST/2sntbr/alma990073513880107976" style="font-size: 24px;") 館藏連結
+          br
+          | * 如有購買需求，請洽
+          a(href="http://www.lib.nchu.edu.tw/index.php/howtobuy" style="font-size: 24px;") 國立中興大學圖書館出版中心
+          |  
+        img(src="./img/exhibition/6.jpg" style="height: 50%;")
+        br
+        br
+        br
+        p(style="font-size: 24px;")
+          | ★ 第二部分 : 興大技能養成 (展區入口正對面)
+          br
+          | 曾經在教室聽講、在實驗室操作的學生，有一天也成了教室裡的老師、面對講台下稚嫩臉孔，將專業知識學問一棒交一棒傳承下去。
+          br
+          | * 學生 → 校長
+          br
+          | 你知道易希道老師曾經教導過陳清義校長嗎？所以說，人生確實存在許多可能！Never say never！
+          br
+          | * 個人色彩豐富的國文老師
+          br
+          | 上課前─從不遲到，須以英國牛津大學傳統歡迎老師的方式，全班敲打桌椅、門窗，歡聲雷動以示尊師。
+          br
+          | 上課中─有時候魯大師煙癮一來，抽根煙更是講得口沫橫飛，頭頭是道，讓你聽得更是欲罷不能…。
+          br
+          | 上課後─…魯大師得悉我們大夥兒之來意後，笑顏叫我們坐，其實一進門就擠滿了屋子，因為當時大學敎授待遇不是很優厚，宿舍空間有限，傢俱設備也很簡陋。不過，我們蠻覺得屋子設備雖簡陋，但卻充滿著書香氣氛呢！幾天後，大師康復又來上課了，一進敎室即滿臉笑顏不絶地稱讚母雞買得好。...
+          br
+          | 詳情可參閱彙編(二)頁165-167。
+        img(src="./img/exhibition/7.jpg" style="height: 50%;")
+        br
+        br
+        br
+        p(style="font-size: 24px;")
+          | ★ 第三部分：興大滾石脈動 (面對展區入口右邊牆面)
+          br
+          | 呈現曾在興大服務的父子/父女親子關係人物，沿著時間軸，承先啟後在興大校園持續貢獻所學。
+          br
+          | * 掛牌玄機 ─每塊木牌後簡單記述老師學經歷，木牌底下則為傳承子女的姓名，讓大家可以輕鬆一目瞭然。
+        img(src="./img/exhibition/8.jpg" style="height: 50%;")
+        br
+        br
+        br
+        p(style="font-size: 24px;")
+          | ★ 第四部份：興大應援團 (面對展區右手邊)
+          br
+          | 校園戀愛故事就發生在你我周遭，你看出來對應關係了嗎？
+          br
+          | 有人攜手渡海來台，有人在校園裡共事、就學進而相識、相戀、共結連理，他們參與了興大從農學院草創建設時期至國立中興大學茁壯迄今的歷程。 我們可以讀著文字，沿著各主角們的足跡，從另一個角度了解興大的前世今生。
+          br
+          | * 你知道貢穀紳校長是雷洪音老師的家教嗎？這樣的故事也持續發生在現今社會，是不是很有趣也具時代性呢？ [資料來源：＜我們的母親＞_貢中元老師提供]
+          br
+          | * 無獨有偶，除了特展呈現的幾對老師夫婦外，尚有其他夫妻檔、親子檔，歡迎您來參展時與我們聊聊前塵往事，或是提供興大相關圖片資料給我們留存，一起話當年。
+        img(src="./img/exhibition/9.jpg" style="height: 50%;")
+        br
+        img(src="./img/exhibition/10.jpg" style="height: 50%;")
+        br
+        br
+        br
+        p(style="font-size: 24px;")
+          | ★ 線上看展_文學院數位內容策展課程學生作品
+          br
+          | 1. 連姵君、蔡新緣 - 興人誌 (校史館特藏) : 
+          a(href="https://my.matterport.com/show/?m=h671Pppbub2") https://my.matterport.com/show/?m=h671Pppbub2
+          br
+          | 2. 羅上豪、李紘宇 - 興人誌 (校史館特藏) : 
+          a(href="https://my.matterport.com/show/?m=fLwUUhU2wjK") https://my.matterport.com/show/?m=fLwUUhU2wjK
+	
     
-    .exhibition-banner
-      img(src="{{ url_for('static', filename='exhibition202401.png') }}", alt="湖泥湖圖特展橫幅")
-    
-    .exhibition-description
-      p(style='font-size: 24px;') 中興湖承載了四十七年的往來，也是中興師生以及鄰里的文化交流地帶，逐一孕育出獨有的地標景色。中興湖是如何被形塑出來？今日又如何發展出連日本都驚嘆的生態？歡迎各位走進展區細細觀賞…
-
-    .exhibition-banner
-      img(src="{{ url_for('static', filename='exhibition202402.png') }}", alt="湖泥湖圖特展橫幅")
-    
-    .exhibition-sections
-      h2 本次特展分為四個小區塊可供參觀：
-      .section-content
-        h3 ★ 第一部分：「生」在興湖畔、今昔對比 (面對展區入口左邊牆上)
-        .exhibition-banner
-          img(src="{{ url_for('static', filename='exhibition202403.png') }}", alt="湖泥湖圖特展橫幅")
-      
-      .section-content
-        h3 ★ 第二部分：興湖清淤生態趣 (展區入口正對面)
-        .exhibition-banner
-          img(src="{{ url_for('static', filename='exhibition202404.png') }}", alt="湖泥湖圖特展橫幅")
-      
-      .section-content
-        h3 ★ 第三部分：放浪江湖 (面對展區入口右邊牆面)
-        .exhibition-banner
-          img(src="{{ url_for('static', filename='exhibition202405.png') }}", alt="湖泥湖圖特展橫幅")
-      
-      .section-content
-        h3 ★ 第四部分：沒湖說 (面對展區右手邊)
-        .exhibition-banner
-          img(src="{{ url_for('static', filename='exhibition202406.png') }}", alt="湖泥湖圖特展橫幅")
-
-      .special-note
-        p(style='font-size: 24px;') ★展區中間另設有「互動區」，歡迎蒞臨體驗！
-        p(style='font-size: 24px;') ★校史館開放時間：每週一、三、五 早上 10 點至下午 4 點。
-
+      //-
+        img(src='./img/exhibition/2019post.jpg' style='float:left;width: 45%;margin: 2.5%')
+        div(style='float:left;padding: 2rem;')
+          p(style='font-size: 16px;')
+              | 校史館，一年一特展。
+              br
+              | 100週年校慶，隆重獻映—穿越時空の情報員！
+              br
+              | 歡迎中興特工們蒞臨，跟我們一起穿越校史，燒腦玩遊戲
+              br
+            img(src='./img/exhibition/2019-3.png' style='width: 400px; height: 400px;clear:both;')
+            br
+            img(src='./img/exhibition/2019-2.png' style='max-width:400px;width: auto;height: auto;clear:both;')
+            h2 參觀資訊
+            p(style='font-size: 16px;') 每週一、三、五 10:00~16:00
+              br
+              | 本館參觀詳情請見
+              a(href='./visit.html') 參觀資訊
 block js
   script(src='./js/special.js')
-
