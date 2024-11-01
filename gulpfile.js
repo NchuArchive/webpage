@@ -37,20 +37,22 @@ function css () {
     .pipe(dest(paths.dist.css))
 }
 
-function less () {
+function less (done) {
   return src(paths.src.less)
     .pipe($.less())
     .pipe($.cleanCss({ compatibility: '*'}))
     .pipe(dest(paths.dist.css))
+    done();
 }
 
-function scripts () {
+function scripts (done) {
   return src(paths.src.js)
     .pipe(babel({
       presets: ['env']
     }))
     .pipe(uglify())
     .pipe(dest(paths.dist.js))
+    done();
 }
 
 function lib () {

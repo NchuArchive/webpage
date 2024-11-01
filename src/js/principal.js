@@ -3,11 +3,11 @@ var principal = new Vue({
   data() {
     return {
       principals: [],
-      principalInfo: ''
+      principalInfo: '',
     }
   },
   mounted() {
-    var api = '1MA_7CkvGzbdhkiarcvOqcWrYBWS-gGI804ymEkU0afM'
+    var api = '1duHihJkNVZR5zGyvqtFintCuNuSWKVkpvFOFYkiFSAg'
     var apiUrl = 'http://gsx2json.com/api?id=' + api + '&sheet=worksheet'
     var getSheet = $.getJSON(apiUrl)
 
